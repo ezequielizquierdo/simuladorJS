@@ -1,4 +1,4 @@
-///// COTIZADOR DE MATERIALES /////
+///// COTIZADOR DE MATERIALES ########//
 // Consultar materiales hasta que no quiera seguir consultando.
 
 var nombre = prompt("Ingrese su nombre");
@@ -16,39 +16,35 @@ function cotizacion () {
     materiales["acero"] = ["Acero de construcción tipo III diám. 12 mm", 77756.97];
     materiales["ceramica"] = ["Cerám. Esmalt. 'Pietra Grafito' o similar 20 x 20 cm", 37971];
 
+    var continuar1 = 'si';
     
     do {
         var material = prompt("Que material queres consultar?").toLowerCase();
 
         if (materiales[material] == undefined) {
             alert("No tenemos ese material en stock");
-            prompt("Quieres consultar algun otro material? Si o No").toLowerCase();
+            continuar1 = prompt("Quieres consultar algun otro material? Si o No").toLowerCase();        
         }
 
-    } while (materiales[material] == undefined);
+    } while (materiales[material] == undefined && continuar1 == 'si');
 
-    console.log('Material consultado: ', materiales[material]);
-    
-    var coti = parseInt(prompt("Que cantidad queres cotizar?").toLowerCase());
+    if (continuar1 == 'si') {
 
-    console.log('Valor $: ', materiales[material][1] * coti);           
+        console.log('Material consultado: ', materiales[material]);
+        
+        var coti = parseInt(prompt("Que cantidad queres cotizar?").toLowerCase());
 
-    var continuar = prompt("Quieres consultar algun otro material? Si o No").toLowerCase();
+        console.log('Valor $: ', materiales[material][1] * coti);           
 
-    if(continuar === "si"){
-        cotizacion();
+        var continuar2 = prompt("Quieres consultar algun otro material? Si o No").toLowerCase();
+
+        if(continuar2 === "si"){
+            cotizacion();
+        } else {
+            alert("Muchas gracias por consultar");
+        }        
     } else {
-        alert("Muchas gracias por consultar");
-    }        
+       alert("Muchas gracias por consultar");
+    }
 }
-
 cotizacion();
-
-
-
-
-
-
-
-
-    
