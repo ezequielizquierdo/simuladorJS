@@ -1,0 +1,82 @@
+/* HEADER */
+
+
+
+
+/* BODY */
+.bienvenida {
+    background-color: grey;
+    height: 20vh;
+    padding: 50px;
+    text-align: center;
+}
+
+.primera {
+    background-color: lightyellow;
+    height: 20vh;
+    padding: 50px;
+    text-align: center;
+}
+
+.row{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-select{
+    text-align: center;
+    font-size: 17px;
+}
+
+.form-control{
+    text-align: center;
+    font-size: 17px;
+    height: 10vh;
+}
+
+.cantidad {
+    background-color: lightgoldenrodyellow;
+    height: 20vh;
+    padding: 50px;
+    text-align: center;
+}
+.moneda{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.celda1{
+    background-color: lightgreen ;
+    padding: 10px;
+}
+
+.celda2{
+    background-color: lightcyan;
+    padding: 10px;
+
+}
+
+.celda3{
+    background-color: lightblue;
+    padding: 10px;
+}
+
+/* FOOTER */
+.footer{
+    background-color: lightgray;
+    height: 15vh;
+}
+
+@media only screen and (min-width: 768px) {
+
+.moneda{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+}

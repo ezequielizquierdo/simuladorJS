@@ -1,32 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="simulador.js"></script>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-    <body>
-        <header>
-            <div class="header">
-                header
-            </div>
-        </header>
+  <body>
+    <!-- HEADER -->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Precios Medios Actualizados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Historiales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Informe mensual</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!--BODY-->
+
+    <div class="container-fluid">
+      <div class="bienvenida">
+        <h2>
+          Bienvenido usuario. Vamos a cotizar!
+        </h2>
+      </div>
+
+
+      <div class="primera">
+
+        <h4>
+          "Que material queres consultar?"
+        </h4> 
+
+      </div>
+
+      <div class="row">
+        <select class="form-select" size="3" aria-label="size 3 select example">
+          <option selected>Elegí el material que buscas</option>
+          <option value="cemento">Cemento</option>
+          <option value="cal">Cal</option>
+          <option value="adhesivo">Adhesivo</option>
+          <option value="cascote">Cascote</option>
+          <option value="revoque">Revoque</option>
+          
+        </select>
+      </div>
+
+      <div class="cantidad">
+        <h4>
+          Que cantidad queres cotizar?
+        </h4>
+      </div>
+
+      <div class="numeros">
+        <input class="form-control form-control-sm" type="text" placeholder=".Ingresa cantidad a consultar" aria-label=".form-control-sm example">
+      </div>
+
+
+
+      <div class="moneda">
+
+        <div class="col-md-4 celda1">
+          <div class="titulos">
+            <h3>dolar</h3> 
+            <p class="bajadas">
+              Tu consuta por ... equivale a USD: ... 
+            </p>
+          </div>
+        </div>
         
+        <div class="col-md-4 celda2">
+          <div class="titulos">
+            <h3>pesos argentinos</h3> 
+            <p class="bajadas">
+              Tu consuta por ... equivale a PES: ... 
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-md-4 celda3">
+          <div class="titulos">
+            <h3>euros</h3> 
+            <p class="bajadas">
+              Tu consuta por ... equivale a USD: ... 
+            </p>
+          </div>
+        </div>
+  
+      </div>
+  
+      </div>
 
-        <body>
-            <div class="body">
-                body
-            </div>
-        </body>
+    </div>
 
 
-        <footer>
-            <div class="footer">
-                footer
-            </div>
-        </footer>
-    </body>
+    <footer>
+      <div class="footer">
+        
+      </div>
+    </footer>
+  </body>
 
 </html>
