@@ -12,9 +12,6 @@
     background-color: #f9c18e;
 }
 
-
-
-
 /* BODY */
 .barra{
     background: url(IMG/barraconstruccion.jpg);
@@ -23,7 +20,10 @@
 
 
 .container-fluid{
-    background-color: #faf5f1;
+    background: url(IMG/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     
@@ -58,7 +58,6 @@
 }
 
 .bloqueform{
-    display: flex;
     padding: 10px;
 }
 
@@ -75,6 +74,15 @@
     background-position: center;
     background-size: contain;
     height: 50px;
+}
+
+.imagencantidad{
+    background: url(IMG/quecantidad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 50px;
+
 }
 
 .materials{
@@ -124,7 +132,7 @@
 }
 
 .bloquetexto{
-    
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -139,6 +147,34 @@
     padding: 10px;
 }
 
+.button-consulta{
+    border-radius: 6px;
+    border-bottom: 3px solid lightgray;
+    border-right: 3px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    background-color: #e67d57;
+
+}
+
+.imagen-consulta{
+    background: url(IMG/consultar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 20px;
+    margin: 10px;
+}
+
+.imagen-agregar{
+    background: url(IMG/agregaracotizacion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 25px;
+    margin: 10px;
+}
+
 .cuadromoneda{
     padding: 10px;
     width: 100%;
@@ -146,11 +182,115 @@
     border-radius: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-bottom: 3px solid lightgray;
+    border-right: 3px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+
+.monedashoy{
+    background: url(IMG/lasmonedashoy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 25px;
+    margin: 10px;
+}
+
+.titulo-monedas{
+    /* background: url(IMG/imagen\ monedas.jpg); */
+    background-color: #d3d3d3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor-monedas{
+    background-color: whitesmoke;
+    /* background: url(IMG/fondomonedas.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cuadrodolar{
+    background-color: rgb(235, 255, 231);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid lightgrey;
+    border-left: 1px solid lightgray;
+    border-bottom: 3px solid lightgrey;
+    border-right: 3px solid lightgray;
+    border-radius: 6px;
+    width: 25vw;
+    height: 30vh
+}
+
+.cuadroeuro{
+    background-color: rgb(231, 243, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid lightgrey;
+    border-left: 1px solid lightgray;
+    border-bottom: 3px solid lightgrey;
+    border-right: 3px solid lightgray;
+    border-radius: 6px;
+    width: 25vw;
+    height: 30vh;
+}
+
+.cuadrocotizaciones{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columnas{
+    display: flex;
+    flex-direction: row;
+}
+
+.col-euro{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.col-dolar{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.imgtrabajador{
+    background: url(IMG/trabajadores.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* FOOTER */
 footer{
-    background-color: lightgray;
+    background: url(IMG/imagen\ monedas.jpg);   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: relative;
     height: 15vh;
 }
@@ -177,6 +317,17 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     height: 240px;
+}
+
+.contenedor-monedas{
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+}
+
+.cuadro-monedas{
+    display: flex;
+    flex-direction: row;
 }
 
 }
