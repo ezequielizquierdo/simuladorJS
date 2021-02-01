@@ -14,8 +14,8 @@
     <!-- HEADER -->
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+          <a class="navbar-brand" href="#">Hola, usuario.</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,88 +34,95 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Informe mensual</a>
               </li>
             </ul>
-            <form class="d-flex">
+            <!--<form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form>-->
           </div>
         </div>
       </nav>
 
     <!--BODY-->
+    
+    <div class="bienvenida">
+      <div class="logocentro"></div>
+    </div>
+    
+    <div class="barra"></div>
 
     <div class="container-fluid">
-      <div class="bienvenida">
-        <h2>
-          Bienvenido usuario. Vamos a cotizar!
-        </h2>
-      </div>
-
-
-      <div class="primera">
-
-        <h4>
-          "Que material queres consultar?"
-        </h4> 
-
-      </div>
-
-      <div class="row">
-        <select class="form-select" size="3" aria-label="size 3 select example">
-          <option selected>Elegí el material que buscas</option>
-          <option value="cemento">Cemento</option>
-          <option value="cal">Cal</option>
-          <option value="adhesivo">Adhesivo</option>
-          <option value="cascote">Cascote</option>
-          <option value="revoque">Revoque</option>
-          
-        </select>
-      </div>
-
-      <div class="cantidad">
-        <h4>
-          Que cantidad queres cotizar?
-        </h4>
-      </div>
-
-      <div class="numeros">
-        <input class="form-control form-control-sm" type="text" placeholder=".Ingresa cantidad a consultar" aria-label=".form-control-sm example">
-      </div>
-
-
-
-      <div class="moneda">
-
-        <div class="col-md-4 celda1">
-          <div class="titulos">
-            <h3>dolar</h3> 
-            <p class="bajadas">
-              Tu consuta por ... equivale a USD: ... 
-            </p>
-          </div>
-        </div>
+      
+      <div class="col-md-6 bloqueform">
+        <div class="formulario">
         
-        <div class="col-md-4 celda2">
-          <div class="titulos">
-            <h3>pesos argentinos</h3> 
-            <p class="bajadas">
-              Tu consuta por ... equivale a PES: ... 
-            </p>
-          </div>
+        <div class="primera">
+          <div class="imagenmaterial"></div>
         </div>
-  
-        <div class="col-md-4 celda3">
-          <div class="titulos">
-            <h3>euros</h3> 
-            <p class="bajadas">
-              Tu consuta por ... equivale a USD: ... 
-            </p>
-          </div>
+
+        <div class="materials">
+          <select class="form-select" size="3" aria-label="size 3 select example">
+            <option selected>Elegí el material que buscas</option>
+            <option value="cemento">Cemento</option>
+            <option value="cal">Cal</option>
+            <option value="adhesivo">Adhesivo</option>
+            <option value="cascote">Cascote</option>
+            <option value="revoque">Revoque</option>
+            
+          </select>
         </div>
-  
+
+        <div class="cantidad">
+          <h4>
+            Que cantidad queres cotizar?
+          </h4>
+        </div>
+
+        <div class="numeros">
+          <input class="form-control form-control-sm" type="text" placeholder=".Ingresa cantidad a consultar" aria-label=".form-control-sm example">
+        </div>
+      
+        <br>
+        <button> Hacer consulta</button>
+        <br>
+        <button> Agregar a la cotización</button>
+
+        
       </div>
-  
+      
+    </div>
+
+    <div class="col-md-6 bloqueresultado">
+
+      <div class="col-md-4 cuadromoneda celda1">
+        <div class="titulos">
+          <h3>dolar</h3> 
+          <p class="bajadas">
+            Tu consuta por ... equivale a USD: ... 
+          </p>
+        </div>
       </div>
+      
+      <div class="col-md-4 cuadromoneda celda2">
+        <div class="titulos">
+          <h3>pesos argentinos</h3> 
+          <p class="bajadas">
+            Tu consuta por ... equivale a PES: ... 
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 cuadromoneda celda3">
+        <div class="titulos">
+          <h3>euros</h3> 
+          <p class="bajadas">
+            Tu consuta por ... equivale a USD: ... 
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
 
     </div>
 

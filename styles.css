@@ -1,24 +1,83 @@
 /* HEADER */
 
+.bg-light { 
+    background-color: #f9c18e!important
+}
+.navbar{
+    padding: 3vh;
+    height: 10vh;
+}
+.container{
+    padding: 0;
+    background-color: #f9c18e;
+}
+
 
 
 
 /* BODY */
+.barra{
+    background: url(IMG/barraconstruccion.jpg);
+    height: 1vh;
+}
+
+
+.container-fluid{
+    background-color: #faf5f1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.logocentro{
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+}
+
 .bienvenida {
-    background-color: grey;
-    height: 20vh;
+    background: url(IMG/imagen\ portada\ naranja.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 50px;
     text-align: center;
+}
+
+.formulario{
+    background-color: rgb(255, 239, 231);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid lightgrey;
+    border-left: 1px solid lightgray;
+    border-bottom: 3px solid lightgrey;
+    border-right: 3px solid lightgray;
+}
+
+.bloqueform{
+    display: flex;
+    padding: 10px;
 }
 
 .primera {
-    background-color: lightyellow;
+    background-color: #f9c18e;
     height: 20vh;
     padding: 50px;
     text-align: center;
 }
 
-.row{
+.imagenmaterial{
+    background: url(IMG/quematerial.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 50px;
+}
+
+.materials{
     height: 10vh;
     display: flex;
     flex-direction: column;
@@ -37,7 +96,7 @@
 }
 
 .cantidad {
-    background-color: lightgoldenrodyellow;
+    background-color: #f9c18e;
     height: 20vh;
     padding: 50px;
     text-align: center;
@@ -64,19 +123,60 @@
     padding: 10px;
 }
 
+.bloquetexto{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+
+}
+
+.bloqueresultado{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.cuadromoneda{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* FOOTER */
-.footer{
+footer{
     background-color: lightgray;
+    position: relative;
     height: 15vh;
 }
 
 @media only screen and (min-width: 768px) {
+
+    .container-fluid{
+        display: flex;
+        flex-direction: row;
+    }
 
 .moneda{
     display: flex;
     flex-direction: row;
 }
 
-
+.bloqueform{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.logocentro{
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 240px;
+}
 
 }
