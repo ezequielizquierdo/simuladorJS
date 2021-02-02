@@ -16,8 +16,18 @@ let productoSeis = new Producto("arena", "Arena", 1845.16, "m3");
 
 const baseDeDatos = [productoUno, productoDos, productoTres, productoCuatro, productoCinco, productoSeis];
 
-var nombre = prompt("Ingrese su nombre");
-alert("Bienvenido " + nombre + ". Vamos a cotizar!");
+function saludo(){
+    let nombre = prompt("Ingrese su nombre");
+    console.log(nombre);
+    if(nombre){
+    document.getElementById("nombre-usuario").innerHTML = 'Hola ' + nombre + '. Vamos a cotizar!';
+    } else {
+    document.getElementById("nombre-usuario").innerHTML = 'Hola amigo. Vamos a cotizar!';
+    }
+}
+saludo();
+
+
 
 function cotizacion (){
 

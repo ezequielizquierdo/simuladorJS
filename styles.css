@@ -7,6 +7,22 @@
     padding: 3vh;
     height: 10vh;
 }
+
+
+.navbar-brand{
+    font-family: 'Luckiest Guy';
+    font-size: 1rem;
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar-collapse {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .container{
     padding: 0;
     background-color: #f9c18e;
@@ -57,6 +73,10 @@
     border-right: 3px solid lightgray;
 }
 
+.titulos{
+    font-family: 'Luckiest Guy';
+    font-size: 1rem;
+}
 .bloqueform{
     padding: 10px;
 }
