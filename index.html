@@ -62,14 +62,15 @@
           <div class="imagenmaterial"></div>
         </div>
 
-        <div class="materials">
-          <select class="form-select" size="3" aria-label="size 3 select example">
+
+        <div class="materials" id="materials">
+          <select class="form-select" size="3" aria-label="size 3 select example" onchange="mostrarDescripcion(event)">
             <option selected>Elegí el material que buscas</option>
-            <option value="cemento">Cemento</option>
-            <option value="cal">Cal</option>
-            <option value="adhesivo">Adhesivo</option>
-            <option value="cascote">Cascote</option>
-            <option value="revoque">Revoque</option>
+            <option value="cemento" id="cemento" >Cemento</option>
+            <option value="cal" id="cal">Cal</option>
+            <option value="adhesivo" id="adhesivo">Adhesivo</option>
+            <option value="cascote" id="cascote">Cascote</option>
+            <option value="revoque" id="revoque">Revoque</option>
             
           </select>
         </div>
@@ -102,7 +103,9 @@
         <div class="titulos">
           <h3>Dolar</h3> 
           <p class="bajadas">
-            Tu consuta por ... equivale a USD: ... 
+            Tu consuta por 
+            <p id="demo"></p>
+            equivale a USD: ... 
           </p>
         </div>
       </div>
@@ -117,6 +120,15 @@
       </div>
 
       <div class="col-md-4 cuadromoneda celda3">
+        <div class="titulos">
+          <h3>Euro</h3> 
+          <p class="bajadas">
+            Tu consuta por ... equivale a USD: ... 
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 cuadromoneda celda4">
         <div class="titulos">
           <h3>Euro</h3> 
           <p class="bajadas">
@@ -159,7 +171,6 @@
             </p>
           </div>
         </div>
-        
 
 
 

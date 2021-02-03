@@ -1,3 +1,5 @@
+let baseDeDatos = [];
+
 class Producto {
     constructor(nombreProducto, descripcion, precioProducto, um) {
         this.producto = nombreProducto;
@@ -14,7 +16,15 @@ let productoCuatro = new Producto("cascote", "Cascote molido limpio x m3", 1696.
 let productoCinco = new Producto("revoque", "Revoque Plástico tipo 'Revear Color' tambor x 25 kg", 7780.59, "m2");
 let productoSeis = new Producto("arena", "Arena", 1845.16, "m3");
 
-const baseDeDatos = [productoUno, productoDos, productoTres, productoCuatro, productoCinco, productoSeis];
+
+baseDeDatos.push(productoUno);
+baseDeDatos.push(productoDos);
+baseDeDatos.push(productoTres);
+baseDeDatos.push(productoCuatro);
+baseDeDatos.push(productoCinco);
+baseDeDatos.push(productoSeis);
+
+console.log(baseDeDatos);
 
 function saludo(){
     let nombre = prompt("Ingrese su nombre");
@@ -26,8 +36,6 @@ function saludo(){
     }
 }
 saludo();
-
-
 
 function cotizacion (){
 
@@ -51,6 +59,7 @@ function cotizacion (){
     } else {
         
         var coti = parseInt(prompt("Que cantidad queres cotizar?"));
+        
         console.log("Tu consulta por", found.descripcion, "por", coti, found.um, "es $: ", (coti * found.precio));  
             
         material = prompt("Quieres consultar algun otro material? Si o No").toLowerCase();
@@ -61,6 +70,18 @@ function cotizacion (){
             alert("Muchas gracias por consultar");
         }
     }
+    
 }
 
 cotizacion(); 
+
+function mostrarDescripcion(event){
+    var x = event.target.value;
+    let found = baseDeDatos.find(elemento => elemento.producto.toLowerCase() == x);
+    
+    document.getElementById("demo").innerHTML = x;
+    console.log(found);
+
+    console.log(x);
+}
+mostrarDescripcion()

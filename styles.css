@@ -231,8 +231,7 @@
 }
 
 .contenedor-monedas{
-    background-color: whitesmoke;
-    /* background: url(IMG/fondomonedas.jpg); */
+    background-color: #dfd6cd;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
