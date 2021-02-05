@@ -1,0 +1,336 @@
+.bienvenida {
+  background: url(IMG/portadanaranja.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+  text-align: center;
+}
+
+.logocentro{
+  background: url(IMG/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 150px;
+}
+
+.barra{
+  background: url(IMG/barraconstruccion.jpg);
+  height: 1vh;
+}
+
+.container-fluid{
+  background: url(IMG/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.bloqueform{
+  padding: 10px;
+}
+
+.formulario{
+  background-color: rgb(255, 239, 231);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgray;
+  border-bottom: 3px solid lightgrey;
+  border-right: 3px solid lightgray;
+}
+
+.primera {
+  background-color: #f9c18e;
+  height: 20vh;
+  padding: 50px;
+  text-align: center;
+}
+
+.imagenmaterial{
+  background: url(IMG/quematerial.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+}
+
+.materials{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select{
+  text-align: center;
+  font-size: 14px;
+}
+
+.cantidad {
+  background-color: #f9c18e;
+  height: 20vh;
+  padding: 50px;
+  text-align: center;
+}
+
+.imagencantidad{
+  background: url(IMG/quecantidad.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+
+}
+
+.form-control{
+  text-align: center;
+  font-size: 14px;
+  height: 10vh;
+}
+
+.button-consulta{
+  border-radius: 6px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: #e67d57;
+
+}
+
+.imagen-agregar{
+  background: url(IMG/agregaracotizacion.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 25px;
+  margin: 10px;
+}
+
+.bloqueresultado{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.cuadromoneda{
+  padding: 10px;
+  width: 100%;
+}
+
+.titulos{
+  font-family: 'Luckiest Guy';
+  font-size: 1rem;
+}
+
+h3{
+  margin: 0;
+}
+
+.contenedorequivale{
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#demo{
+  font-style: italic;
+}
+
+.contenedorequivalepeso{
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: lightcyan;
+  height: 75px;
+}
+
+.contenedorequivaledolar{
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: lightgreen ;
+  height: 75px;
+}
+
+.contenedorequivaleeuro{
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: lightblue;
+  height: 75px;
+}
+
+.titulo-monedas{
+  background-color: #d3d3d3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.monedashoy{
+  background: url(IMG/lasmonedashoy.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 25px;
+  margin: 10px;
+}
+
+.contenedor-monedas{
+  background: url(IMG/fondomonedas.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  font-family: 'Luckiest Guy';
+  font-size: .9rem;
+  background-color: #dfd6cd;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.cotizacion-monedas{
+  padding: 30px;
+}
+
+.cuadrodolar{
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid lightgreen;
+  border-left: 1px solid lightgreen;
+  border-bottom: 4px solid lightgreen;
+  border-right: 4px solid lightgreen;
+  border-radius: 6px;
+}
+
+.titulo-cotizacion-moneda{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.moneda{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+
+.padre-compra-venta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cuadro-compra-venta{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.topico{
+  font-style: italic;
+}
+
+.mensajecotizacion{
+  font-size: 0.6rem;
+  font-style: italic;
+}
+
+.cuadroeuro{
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid lightblue;
+  border-left: 1px solid lightblue;
+  border-bottom: 4px solid lightblue;
+  border-right: 4px solid lightblue;
+  border-radius: 6px;
+}
+
+.imagen-obreros{
+  background: url(IMG/trabajadores.png);
+  background-color: #dfd6cd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 25vh;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .logocentro{
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 240px;
+  }
+
+  .container-fluid{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bloqueform{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloqueresultado{
+    padding: 70px;
+  }
+
+  .resultados{
+    margin: 40px;
+  }
+
+  .contenedor-monedas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .cotizacion-monedas{
+    width: 30vw;
+  }
+
+  .moneda{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+

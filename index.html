@@ -6,44 +6,27 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <!-- HEADER -->
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-
-          <a class="navbar-brand" id="nombre-usuario" href="#">Hola, usuario.</a>
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Precios Medios Actualizados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Historiales</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Informe mensual</a>
-              </li>
-            </ul>
-            <!--<form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>-->
-          </div>
-        </div>
-      </nav>
+    <nav class="navbar navbar-expand-lg navbar-light";>
+      <a class="navbar-brand" id="nombre-usuario" href="#">Hola, usuario.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+      <div class="navbar-nav">
+              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="serviciosnuevo.html">Precios Medios Actualizados</a>
+              <a class="nav-link" href="empleos.html">Historiales</a>
+              <a class="nav-link" href="equipo.html">Informe mensual</a>
+      </div>
+      </div>
+    </nav>
 
     <!--BODY-->
     
@@ -51,151 +34,164 @@
       <div class="logocentro"></div>
     </div>
     
-    <div class="barra"></div>
-
     <div class="container-fluid">
-      
+
       <div class="col-md-6 bloqueform">
         <div class="formulario">
-        
-        <div class="primera">
-          <div class="imagenmaterial"></div>
-        </div>
 
+          <div class="primera">
+            <div class="imagenmaterial"></div>
+          </div>
 
-        <div class="materials" id="materials">
-          <select class="form-select" size="3" aria-label="size 3 select example" onchange="mostrarDescripcion(event)">
-            <option selected>Elegí el material que buscas</option>
-            <option value="cemento" id="cemento" >Cemento</option>
-            <option value="cal" id="cal">Cal</option>
-            <option value="adhesivo" id="adhesivo">Adhesivo</option>
-            <option value="cascote" id="cascote">Cascote</option>
-            <option value="revoque" id="revoque">Revoque</option>
-            
-          </select>
-        </div>
+          <div class="materials" id="materials">
+            <select class="form-select" size="3" aria-label="size 3 select example" onchange="mostrarDescripcion(event)">
+              <option selected>Elegí el material que buscas</option>
+              <option value="cemento" id="cemento" >Cemento</option>
+              <option value="cal" id="cal">Cal</option>
+              <option value="adhesivo" id="adhesivo">Adhesivo</option>
+              <option value="cascote" id="cascote">Cascote</option>
+              <option value="revoque" id="revoque">Revoque</option>
+            </select>
+          </div>
 
-        <div class="cantidad">
-          <div class="imagencantidad"></div>
-        </div>
+          <div class="cantidad">
+            <div class="imagencantidad"></div>
+          </div>
 
-        <div class="numeros">
-          <input class="form-control form-control-sm" type="text" placeholder=".Ingresa cantidad a consultar" aria-label=".form-control-sm example">
-        </div>
+          <div class="numeros">
+            <input class="form-control form-control-sm" type="text" onkeypress="mostrarValor(event)" placeholder="Ingresa cantidad a consultar" aria-label=".form-control-sm example">
+          </div>
       
-        <br>
-        <button class="button-consulta"> 
-          <div class="imagen-consulta"></div>
-        </button>
-        <br>
-        <button class="button-consulta"> 
-          <div class="imagen-agregar"></div>
-        </button>
-
-        
+          <br>
+          <button class="button-consulta"> 
+            <div class="imagen-agregar"></div>
+          </button>
+        </div>  
       </div>
-      
-    </div>
 
-    <div class="col-md-6 bloqueresultado">
+      <div class="col-md-6 bloqueresultado">
 
-      <div class="col-md-4 cuadromoneda celda1">
-        <div class="titulos">
-          <h3>Dolar</h3> 
-          <p class="bajadas">
-            Tu consuta por 
-            <p id="demo"></p>
-            equivale a USD: ... 
-          </p>
+        <div class="resultados">
+
+          <div class="col-md-4 cuadromoneda celda0">
+
+            <div class="titulos">
+              <h3>Tu consulta es por:</h3> 
+              <div class="contenedorequivale">
+                <p id="demo"></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 cuadromoneda celda1">
+            <div class="titulos">
+              <h3>Pesos argentinos</h3> 
+              <div class="contenedorequivalepeso">
+                <p class="bajadas">equivale a PES:</p>
+                <p id="valorTotal"></p> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 cuadromoneda celda2">
+            <div class="titulos">
+              <h3>Dolar</h3> 
+              <div class="contenedorequivaledolar">
+                <p class="bajadas">equivale a USD:</p>
+                <p id="valorTotal"></p>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 cuadromoneda celda3">
+            <div class="titulos">
+              <h3>Euro</h3> 
+              <div class="contenedorequivaleeuro">
+                <p class="bajadas">equivale a EUR:</p>
+                <p id="valorTotal"></p>  
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-      
-      <div class="col-md-4 cuadromoneda celda2">
-        <div class="titulos">
-          <h3>Pesos argentinos</h3> 
-          <p class="bajadas">
-            Tu consuta por ... equivale a PES: ... 
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4 cuadromoneda celda3">
-        <div class="titulos">
-          <h3>Euro</h3> 
-          <p class="bajadas">
-            Tu consuta por ... equivale a USD: ... 
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4 cuadromoneda celda4">
-        <div class="titulos">
-          <h3>Euro</h3> 
-          <p class="bajadas">
-            Tu consuta por ... equivale a USD: ... 
-          </p>
-        </div>
-      </div>
 
     </div>
-
-    </div>
-
-    </div>
-
 
     <div class="titulo-monedas">
       <div class="monedashoy"></div>
-
     </div>
 
-
-
     <div class="contenedor-monedas">
+
+      <div class="cotizacion-monedas">
       
-
-        <div class="col-md-6 col-dolar">
           <div class="cuadrodolar">
-            <h3>Cotización Dolar</h3> 
-            <p class="bajadas">
-              Tu consuta por ... equivale a PES: ... 
-            </p>
+
+            <div class="titulo-cotizacion-moneda is-4">
+              <div class="moneda">Dolar Oficial</div> 
+            </div>
+
+            <div class="padre-compra-venta is-8">
+
+              <div class="cuadro-compra-venta">
+                <div class="topico">Compra</div>
+                <div class="valor">$ 87.20</div>
+              </div>
+
+              <div class="cuadro-compra-venta">
+                <div class="topico">Venta</div>
+                <div class="valor">$ 92.29</div>
+              </div>
+
+            </div>  
+            
+            <div class="mensajecotizacion">Actualizado el 04/02/21 01:55 PM</div>
           </div>
         </div>
 
-        <div class="col-md-6 col-euro">
-          <div class="cuadroeuro">
-            <h3>Cotización Euro</h3> 
-            <p class="bajadas">
-              Tu consuta por ... equivale a PES: ... 
-            </p>
-          </div>
-        </div>
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-  <div class="barra"></div>
-
-
-    <footer>
-      <div class="footer">
+        <div class="cotizacion-monedas">
         
+          <div class="cuadroeuro">
+
+            <div class="titulo-cotizacion-moneda is-4">
+              <div class="moneda">Euro</div> 
+            </div>
+
+            <div class="padre-compra-venta is-8">
+
+              <div class="cuadro-compra-venta">
+                <div class="topico">Compra</div>
+                <div class="valor">$ 105.26</div>
+              </div>
+
+              <div class="cuadro-compra-venta">
+                <div class="topico">Venta</div>
+                <div class="valor">$ 105.28</div>
+              </div>
+
+            </div>
+            
+            <div class="mensajecotizacion">Actualizado el 04/02/21 01:55 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="imagen-obreros"></div> -->
+
+    <div class="barra"></div>
+
+    <!-- FOOTER -->
+    
+    <footer>
+      <div class="footer">    
       </div>
     </footer>
 
-
-    <script src="simulador.js"></script>
-
+    <!-- SCRIPTS -->
+    
+    <script src="JS/simulador.js" async defer></script>
   </body>
 
 </html>

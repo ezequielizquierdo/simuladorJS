@@ -1,0 +1,53 @@
+.navbar{
+  background-color: #f9c18e;
+  padding: 2vh;
+}
+
+.navbar-brand{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.navbar-nav{
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: black;
+}
+  
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+  
+.navbar-light .navbar-nav .nav-link:hover {
+  font-weight: bolder;
+}
+
+.navbar-collapse {
+  justify-content: flex-end; 
+}
+.navbar-nav {
+  align-items: center; 
+}
+
+@media only screen and (min-width: 768px) {
+
+  .navbar{
+    padding: 3vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+
+
+}

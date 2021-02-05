@@ -1,272 +1,92 @@
 /* HEADER */
 
-.bg-light { 
-    background-color: #f9c18e!important
-}
-.navbar{
-    padding: 3vh;
-    height: 10vh;
-}
 
 
-.navbar-brand{
-    font-family: 'Luckiest Guy';
-    font-size: 1rem;
-    margin: 0;
-    padding: 5px;
-}
 
-.navbar-collapse {
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.container{
-    padding: 0;
-    background-color: #f9c18e;
-}
+  
 
 /* BODY */
-.barra{
-    background: url(IMG/barraconstruccion.jpg);
-    height: 1vh;
-}
 
 
-.container-fluid{
-    background: url(IMG/fondo.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cuadro-valores-moneda{
     display: flex;
-    flex-direction: column;
-    
-}
-
-.logocentro{
-    background: url(IMG/logo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 150px;
-}
-
-.bienvenida {
-    background: url(IMG/imagen\ portada\ naranja.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 50px;
-    text-align: center;
-}
-
-.formulario{
-    background-color: rgb(255, 239, 231);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-top: 1px solid lightgrey;
-    border-left: 1px solid lightgray;
-    border-bottom: 3px solid lightgrey;
-    border-right: 3px solid lightgray;
-}
-
-.titulos{
-    font-family: 'Luckiest Guy';
-    font-size: 1rem;
-}
-.bloqueform{
-    padding: 10px;
-}
-
-.primera {
-    background-color: #f9c18e;
-    height: 20vh;
-    padding: 50px;
-    text-align: center;
-}
-
-.imagenmaterial{
-    background: url(IMG/quematerial.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 50px;
-}
-
-.imagencantidad{
-    background: url(IMG/quecantidad.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 }
 
-.materials{
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.form-select{
-    text-align: center;
-    font-size: 17px;
-}
-
-.form-control{
-    text-align: center;
-    font-size: 17px;
-    height: 10vh;
-}
-
-.cantidad {
-    background-color: #f9c18e;
-    height: 20vh;
-    padding: 50px;
-    text-align: center;
-}
-.moneda{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.celda1{
-    background-color: lightgreen ;
-    padding: 10px;
-}
-
-.celda2{
-    background-color: lightcyan;
-    padding: 10px;
-
-}
-
-.celda3{
-    background-color: lightblue;
-    padding: 10px;
-}
-
-.bloquetexto{
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 50px;
-
-}
-
-.bloqueresultado{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-}
-
-.button-consulta{
-    border-radius: 6px;
-    border-bottom: 3px solid lightgray;
-    border-right: 3px solid lightgray;
-    border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-    background-color: #e67d57;
-
-}
-
-.imagen-consulta{
-    background: url(IMG/consultar.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 20px;
-    margin: 10px;
-}
-
-.imagen-agregar{
-    background: url(IMG/agregaracotizacion.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 25px;
-    margin: 10px;
-}
-
-.cuadromoneda{
-    padding: 10px;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid lightgray;
-    border-right: 3px solid lightgray;
-    border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-}
 
 
-.monedashoy{
-    background: url(IMG/lasmonedashoy.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 25px;
-    margin: 10px;
-}
 
-.titulo-monedas{
-    /* background: url(IMG/imagen\ monedas.jpg); */
-    background-color: #d3d3d3;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.contenedor-monedas{
-    background-color: #dfd6cd;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
-.cuadrodolar{
-    background-color: rgb(235, 255, 231);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-top: 1px solid lightgrey;
-    border-left: 1px solid lightgray;
-    border-bottom: 3px solid lightgrey;
-    border-right: 3px solid lightgray;
-    border-radius: 6px;
-    width: 25vw;
-    height: 30vh
-}
 
-.cuadroeuro{
-    background-color: rgb(231, 243, 255);
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-top: 1px solid lightgrey;
-    border-left: 1px solid lightgray;
-    border-bottom: 3px solid lightgrey;
-    border-right: 3px solid lightgray;
-    border-radius: 6px;
-    width: 25vw;
-    height: 30vh;
-}
+
 
 .cuadrocotizaciones{
     padding: 20px;
@@ -305,48 +125,34 @@
 }
 
 /* FOOTER */
-footer{
-    background: url(IMG/imagen\ monedas.jpg);   
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    height: 15vh;
-}
 
-@media only screen and (min-width: 768px) {
 
-    .container-fluid{
-        display: flex;
-        flex-direction: row;
-    }
+                        @media only screen and (min-width: 768px) {
 
-.moneda{
-    display: flex;
-    flex-direction: row;
-}
+                            
 
-.bloqueform{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.logocentro{
-    background: url(IMG/logo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 240px;
-}
+                            
 
-.contenedor-monedas{
-    display: flex;
-    flex-direction: row;
-    height: 40vh;
-}
+                        
 
-.cuadro-monedas{
-    display: flex;
-    flex-direction: row;
-}
+                        
 
-}
+                        
+
+
+
+                        
+
+                        
+
+                        
+
+                        .cuadro-monedas{
+                            display: flex;
+                            flex-direction: row;
+                        }
+
+                        }
+
+
+
