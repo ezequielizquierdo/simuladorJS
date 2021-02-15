@@ -29,7 +29,7 @@ baseDeDatos.push(productoCuatro);
 baseDeDatos.push(productoCinco);
 baseDeDatos.push(productoSeis);
 
-
+// Consulta de nombre para localStorage
 if (localStorage.nombre) {
     $("#nombre-usuario").html('Hola ' + localStorage.nombre + '. Vamos a cotizar!');
 } else {
@@ -37,7 +37,7 @@ if (localStorage.nombre) {
         let nombre = prompt("Ingrese su nombre");
         localStorage.setItem("nombre", nombre);
         $("#nombre-usuario").html('Hola ' + localStorage.nombre + '. Vamos a cotizar!');
-    }     
+    }
     saludo();
 }
 
@@ -52,15 +52,11 @@ function Carrito() { // CARRITO VACIO
     this.valorTotal = function () {
         var sumaTotal = 0;
         for (let i = 0; i < this.items.length; i++) {
-            var valorlineas = unalinea.valorTotal();
-            sumaTotal += valorlineas
+            sumaTotal += this.items[i].valor;
         }
         console.log(sumaTotal)
         return sumaTotal;
-        
-        
     }
-
 };
 
 var miCarrito = new Carrito();
@@ -105,43 +101,52 @@ function mostrarValor(event) {
 
 
 ////////// CONSTRUCCION DE LINEAS 
+// Agregar productos al cotizador. Las lineas se componen por: Descripción del producto, Cantidad elegida, y su valor.
+var sumaTotal = 0;
+function agregarAlCotizador(descripcion, cantidad, valor) {
+    this.descripcion = descripcion;
+    this.cantidad = cantidad;
+    this.valor = valor;
 
-function agregarAlCotizador() {
+    this.agregarDescripcion = function (descripcion) {
+        this.descripcion = descripcion
+    }
 
-    function Linea() {
-        this.descripcion = []
-        this.cantidad = []
-        this.valor = []
-        this.total = []
+    this.agregarCantidad = function (cantidad) {
+        this.cantidad = cantidad
+    }
 
-        this.agregarDescripcion = function (descripcion) {
-            this.descripcion = descripcion
-        }
+    this.agregarValor = function (valor) {
+        this.valor = valor
+    }
 
-        this.agregarCantidad = function (cantidad) {
-            this.cantidad = cantidad
-        }
-
-        this.agregarValor = function (valor) {
-            this.valor = valor
-        }
-
-        this.valorTotal = function(){
-            var sumaTotal = 0; // Inicializo en 0
-            sumaTotal += this.producto.precioProducto; // Le sumo el valor que sale el producto.
-        }
-    };
+    this.valorTotal = function () {
+        sumaTotal += this.valor;
+    }
 
     ////////// ARMADO DE LINEA
+    // Contrucción de cada linea. Elección del usuario en el formulario.
+    class Linea {
+        constructor(descripcion, cantidad, valor) {
+            this.descripcion = descripcion;
+            this.cantidad = cantidad;
+            this.valor = valor;
+        }
 
-    var miLinea = new Linea();
+        valorTotal() {
+            sumaTotal += this.valor;
+        }
 
-    // miLinea.agregarDescripcion(document.getElementById("demo").innerHTML);
-    miLinea.agregarDescripcion($("#demo").html());
-    // miLinea.agregarCantidad(document.getElementById("volumen").innerHTML);
-    miLinea.agregarCantidad($("#volumen").html());
-    // miLinea.agregarValor(document.getElementById("valorPesos").innerHTML);
-    miLinea.agregarValor($("#valorPesos").html());
+    }
+
+    var miLinea = new Linea(
+        // miLinea.agregarDescripcion(document.getElementById("demo").innerHTML);
+        $("#demo").html(),
+        // miLinea.agregarCantidad(document.getElementById("volumen").innerHTML);
+        $("#volumen").html(),
+        // miLinea.agregarValor(document.getElementById("valorPesos").innerHTML);
+        $("#valorPesos").html(),
+    )
 
     console.log(miLinea);
 
@@ -149,15 +154,13 @@ function agregarAlCotizador() {
     console.log(miCarrito);
 
     ////////// AGREGAR LINEAS AL COTIZADOR EN EL MODAL
-    
+
     carrito.push(miLinea)
     console.log(carrito)
+    // console.log(sumaTotal)
 }
 
-
 ////////// BORRAR CARRITO
-
-
 
 
 ////////// BORRAR LINEAS DEL COTIZADOR EN EL MODAL
