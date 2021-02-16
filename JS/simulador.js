@@ -1,10 +1,13 @@
+let carrito = {};
 let baseDeDatos = [];
-let carrito = [];
+var miCarrito = new Carrito();
 
-if (localStorage.getItem("carrito") != null) {
-    carrito = JSON.parse(localStorage.getItem("carrito"));
-    $("#contador").html(carrito.length);
-}
+// if (localStorage.getItem("carrito") != null) {
+//     console.log("Ingresando a validación");
+//     carrito = JSON.parse(localStorage.getItem("carrito"));
+
+//     $("#contador").html(miCarrito.obtenerItems().length);
+// }
 
 class Producto {
     constructor(nombreProducto, descripcion, precioProducto, um) {
@@ -33,14 +36,10 @@ baseDeDatos.push(productoSeis);
 if (localStorage.nombre) {
     $("#nombre-usuario").html('Hola ' + localStorage.nombre + '. Vamos a cotizar!');
 } else {
-    function saludo() {
-        let nombre = prompt("Ingrese su nombre");
-        localStorage.setItem("nombre", nombre);
-        $("#nombre-usuario").html('Hola ' + localStorage.nombre + '. Vamos a cotizar!');
-    }
-    saludo();
+    let nombre = prompt("Ingrese su nombre");
+    localStorage.setItem("nombre", nombre);
+    $("#nombre-usuario").html('Hola ' + localStorage.nombre + '. Vamos a cotizar!');
 }
-
 
 function Carrito() { // CARRITO VACIO
     this.items = []
@@ -48,18 +47,22 @@ function Carrito() { // CARRITO VACIO
     this.agregarItem = function (item) {
         this.items.push(item);
     }
-
+    
     this.valorTotal = function () {
         var sumaTotal = 0;
         for (let i = 0; i < this.items.length; i++) {
-            sumaTotal += this.items[i].valor;
+            sumaTotal += this.items[i].precio;
         }
         console.log(sumaTotal)
         return sumaTotal;
     }
+
+    this.obtenerItems = function(){
+        console.log("debug 2", this.items)
+        return this.items;
+    }
 };
 
-var miCarrito = new Carrito();
 
 // Función para mostrar descripción del producto seleccionado.
 function mostrarDescripcion(event) {
@@ -103,64 +106,39 @@ function mostrarValor(event) {
 ////////// CONSTRUCCION DE LINEAS 
 // Agregar productos al cotizador. Las lineas se componen por: Descripción del producto, Cantidad elegida, y su valor.
 var sumaTotal = 0;
-function agregarAlCotizador(descripcion, cantidad, valor) {
-    this.descripcion = descripcion;
-    this.cantidad = cantidad;
-    this.valor = valor;
-
-    this.agregarDescripcion = function (descripcion) {
-        this.descripcion = descripcion
-    }
-
-    this.agregarCantidad = function (cantidad) {
-        this.cantidad = cantidad
-    }
-
-    this.agregarValor = function (valor) {
-        this.valor = valor
-    }
-
-    this.valorTotal = function () {
-        sumaTotal += this.valor;
-    }
-
-    ////////// ARMADO DE LINEA
-    // Contrucción de cada linea. Elección del usuario en el formulario.
-    class Linea {
-        constructor(descripcion, cantidad, valor) {
-            this.descripcion = descripcion;
-            this.cantidad = cantidad;
-            this.valor = valor;
-        }
-
-        valorTotal() {
-            sumaTotal += this.valor;
-        }
-
-    }
-
-    var miLinea = new Linea(
-        // miLinea.agregarDescripcion(document.getElementById("demo").innerHTML);
-        $("#demo").html(),
-        // miLinea.agregarCantidad(document.getElementById("volumen").innerHTML);
-        $("#volumen").html(),
-        // miLinea.agregarValor(document.getElementById("valorPesos").innerHTML);
-        $("#valorPesos").html(),
-    )
-
-    console.log(miLinea);
-
-    miCarrito.agregarItem(miLinea);
+function agregarAlCotizador() {
+    miCarrito.agregarItem((`{"descripcion" : ${$("#demo").html()}, "cantidad" : ${$("#volumen").val()}, "precio": ${$("#valorPesos").html()}}`));
+    console.log("debug1", miCarrito.obtenerItems())
+    
+    localStorage.setItem("carritoActual", JSON.stringify(miCarrito.obtenerItems()));
+    
     console.log(miCarrito);
+    console.log(miCarrito.items.length);
+    console.log($("#volumen"));
 
-    ////////// AGREGAR LINEAS AL COTIZADOR EN EL MODAL
-
-    carrito.push(miLinea)
-    console.log(carrito)
-    // console.log(sumaTotal)
 }
 
+// Obtener el carrito actual en el localStorage. Devolverá un array de JSON.
+var obtenerCarritoActual = localStorage.getItem("carritoActual");
+console.log(obtenerCarritoActual);
+
+
+// Transformo el texto JSON en objetos.
+var objetosEnCarritoActual = JSON.parse(localStorage.getItem("carritoActual"));
+console.log(objetosEnCarritoActual);
+
+
+// Cuantos objetos hay en el carrito.
+var tamañoCarritoActual = JSON.parse(localStorage.getItem("carritoActual")).length;
+console.log(tamañoCarritoActual);
+
+
 ////////// BORRAR CARRITO
+
+function vaciarCotizador(){
+    localStorage.clear();
+}
+
 
 
 ////////// BORRAR LINEAS DEL COTIZADOR EN EL MODAL
