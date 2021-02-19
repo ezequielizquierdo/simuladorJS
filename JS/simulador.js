@@ -1,13 +1,11 @@
-let carrito = {};
 let baseDeDatos = [];
-var miCarrito = new Carrito();
+miCarrito = new Carrito();
 
-// if (localStorage.getItem("carrito") != null) {
-//     console.log("Ingresando a validación");
-//     carrito = JSON.parse(localStorage.getItem("carrito"));
-
-//     $("#contador").html(miCarrito.obtenerItems().length);
-// }
+if (localStorage.getItem("carritoActual") != null) {
+    console.log("Ingresando a validación");
+    carritoActual = JSON.parse(localStorage.getItem("carritoActual"));
+    $("#contador").html(carritoActual.length);
+}
 
 class Producto {
     constructor(nombreProducto, descripcion, precioProducto, um) {
@@ -44,6 +42,8 @@ if (localStorage.nombre) {
 function Carrito() { // CARRITO VACIO
     this.items = []
 
+    
+    
     this.agregarItem = function (item) {
         this.items.push(item);
     }
@@ -56,13 +56,12 @@ function Carrito() { // CARRITO VACIO
         console.log(sumaTotal)
         return sumaTotal;
     }
-
-    this.obtenerItems = function(){
-        console.log("debug 2", this.items)
+    
+    this.obtenerItems = function () {
+        // console.log("debug 2", this.items)
         return this.items;
     }
 };
-
 
 // Función para mostrar descripción del producto seleccionado.
 function mostrarDescripcion(event) {
@@ -70,7 +69,7 @@ function mostrarDescripcion(event) {
     let found = baseDeDatos.find(elemento => elemento.producto == descri);
     // document.getElementById("demo").innerHTML = found.descripcion;
     $("#demo").html(found.descripcion);
-    console.log(descri);
+    console.log("Producto ->", descri);
 }
 
 // Función para mostrar los valores (en $, USD, y EUR) de acuerdo a la cantidad ingresada
@@ -86,8 +85,7 @@ function mostrarValor(event) {
     // document.getElementById("valorEuros").innerHTML = ((cantidadElegida * found.precio) / document.getElementById("cotieuro").innerHTML).toFixed(2);
     let valorElegidoEnEur = $("#valorEuros").html(((cantidadElegida * found.precio) / $("#cotieuro").html()).toFixed(2));
 
-
-    console.log(cantidadElegida)
+    console.log("Cantidad elegida ->", cantidadElegida)
     // console.log(valorElegidoEnPes)
     // console.log(valorElegidoEnUSD)
     // console.log(valorElegidoEnEur)
@@ -105,40 +103,49 @@ function mostrarValor(event) {
 
 ////////// CONSTRUCCION DE LINEAS 
 // Agregar productos al cotizador. Las lineas se componen por: Descripción del producto, Cantidad elegida, y su valor.
-var sumaTotal = 0;
+// var sumaTotal = 0;
 function agregarAlCotizador() {
-    miCarrito.agregarItem((`{"descripcion" : ${$("#demo").html()}, "cantidad" : ${$("#volumen").val()}, "precio": ${$("#valorPesos").html()}}`));
-    console.log("debug1", miCarrito.obtenerItems())
+    miCarrito.agregarItem((`{descripcion : ${$("#demo").html()}, cantidad : ${$("#volumen").val()}, precio: ${$("#valorPesos").html()}}`));
+    console.log("Producto agregado ->", miCarrito.obtenerItems())
     
     localStorage.setItem("carritoActual", JSON.stringify(miCarrito.obtenerItems()));
-    
-    console.log(miCarrito);
-    console.log(miCarrito.items.length);
-    console.log($("#volumen"));
 
+    if (localStorage.getItem("carritoActual") != null) {
+        // console.log("Ingresando a validación");
+        carritoActual = JSON.parse(localStorage.getItem("carritoActual"));
+        $("#contador").html(carritoActual.length);
+    }
+    
 }
 
-// Obtener el carrito actual en el localStorage. Devolverá un array de JSON.
-var obtenerCarritoActual = localStorage.getItem("carritoActual");
-console.log(obtenerCarritoActual);
 
 
-// Transformo el texto JSON en objetos.
-var objetosEnCarritoActual = JSON.parse(localStorage.getItem("carritoActual"));
-console.log(objetosEnCarritoActual);
+// console.log("Producto agregado al Carrito ->", miCarrito);
+// console.log(miCarrito.items.length); // Prueba cantidad de productos en miCarrito
+// console.log($("#volumen")); // Prueba propiedad volumen.
+
+// // Obtener el carrito actual en el localStorage. Devolverá un array de JSON.
+// var obtenerCarritoActual = localStorage.getItem("carritoActual");
+// // console.log(obtenerCarritoActual); // Obtener Array de productos en el localStorage de carritoActual
 
 
-// Cuantos objetos hay en el carrito.
-var tamañoCarritoActual = JSON.parse(localStorage.getItem("carritoActual")).length;
-console.log(tamañoCarritoActual);
+// // Transformo el texto JSON en objetos.
+// var objetosEnCarritoActual = JSON.parse(localStorage.getItem("carritoActual"));
+// // console.log(objetosEnCarritoActual); // Obtener JSON de productos en el localStorage de carritoActual
 
 
-////////// BORRAR CARRITO
+// // Cuantos objetos hay en el carrito.
+// var tamañoCarritoActual = JSON.parse(localStorage.getItem("carritoActual")).length;
+// console.log(tamañoCarritoActual); // Cantidad de productos en el carritoActual
 
-function vaciarCotizador(){
+
+// localStorage.setItem("carritoActual", JSON.stringify(miCarrito.obtenerItems()));
+
+
+////////// BORRAR CARRITO COMPLETO
+
+function vaciarCotizador() {
     localStorage.clear();
 }
 
-
-
-////////// BORRAR LINEAS DEL COTIZADOR EN EL MODAL
+    ////////// BORRAR LINEAS INDIVIDUALES DEL COTIZADOR EN EL MODAL
