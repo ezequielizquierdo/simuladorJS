@@ -87,7 +87,8 @@
         <nav class="botonera navbar-inverse bg-inverse bg-faded">
           <div class="row">
             <div class="col">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart"> Ver Cotizador
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" id="agregarAlCarrito"> Ver Cotizador
                 (<span id="contador"></span>)</button>
               <button class="clear-cart btn btn-danger" onclick="vaciarCarrito()" id="vaciar-carrito">Limpiar cotizador</button>
             </div>
@@ -110,7 +111,6 @@
               <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
 
-
                   <table class="table table-hover">
                     <thead>
                       <tr>
@@ -121,7 +121,9 @@
                         <th> </th>
                       </tr>
                     </thead>
+
                     <tbody id="cart-items">
+                      
                     </tbody>
                     <tfoot>
                       <tr>
@@ -129,7 +131,7 @@
                         </td>
                         <td>  </td>
                         <td>Total</td>
-                        <td class="text-right" id="total-value"><strong>$0</strong></td>
+                        <td class="text-right" id="total-value"></td>
                         <td>  </td>
                       </tr>
                     </tfoot>

@@ -43,52 +43,71 @@ function Carrito() {
     if (localStorage.getItem("carrito") != null) {
         carrito = JSON.parse(localStorage.getItem("carrito"));
         this.items = carrito;
-        $("#contador").html(carrito.length);
     }
 
-    // 4. Creamos un metodo para que nos de la cantidad actual del carrito
+    // 4. Creamos un metodo para que nos de la cantidad actual del carrito.
     this.SumaTotalItemsCarrito = function () {
         return this.items.length;
     }
 
+    // 5. Agregar un nuevo item al carrito actual.
+    // PARA MEJORAR: Antes de cargar un nuevo elemento al carrito
+    // habria que ver si ese elemento existe en el carrito.
     this.agregarItem = function (item) {
-        // 5. PARA MEJORAR: Antes de cargar un nuevo elemento al carrito
-        // habria que ver si ese elemento existe en el carrito.
         return this.items.push(item);
     }
 
+    // 6. Sumar totales de los productos en carrito.
     this.valorTotal = function () {
-        var sumaTotal = 0;
-        for (let i = 0; i < this.items.length; i++) {
-            sumaTotal += this.items[i].precio;
-        }
-        console.log(sumaTotal)
-        return sumaTotal;
+        var total = 0;
+        this.items.forEach(function (obj) {
+            total += parseInt(obj.precio * obj.cantidad);
+        });
+        console.log("Total acumulado $ ", total);
+        $("#total-value").html("$" + total.toFixed(2));
+
     }
 
-    // Muestra todos los elementos existentes en items[]
+    // 7. Muestra todos los elementos existentes en items[]
     this.obtenerItems = function () {
         // console.log("debug 2", this.items)
         return this.items;
     }
 
-    this.vaciarCarrito = function (e) {
-        carrito = [];
+    // 8. Vaciar carrito y mostrar cantidad en carrito.
+    this.vaciarCarrito = function () {
+        this.items = [];
         localStorage.clear()
-        $("#contador").html(carrito.length);
-        // return this.items;
-
+        $("#contador").html(this.items.length);
     }
 
-    // const btnVaciar = document.getElementById("vaciar-carrito").addEventListener("click", function () {
-    //     carrito = [];
-    //     localStorage.clear()
-    //     $("#contador").html(carrito.length);
-    // });
-    // btnVaciar;
+    // 9. Refleja en el id #contador la suma de items en carrito.
+    $("#contador").html(this.SumaTotalItemsCarrito());
 
 }
 
+// 9. Refleja en el id #contador la suma de items en carrito.
+$("#contador").html(carrito.SumaTotalItemsCarrito());
+// console.group(carrito.SumaTotalItemsCarrito());
+
+function mostrarProductosEnCarrito() {
+    // localStorage.getItem("carrito")
+    // console.log("Productos agregados ->", carrito.obtenerItems())
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    for (let i = 0; i < carrito.length; i++) {
+        // console.log([i]);
+        $("#cart-items").append(`
+            <tr>
+                <th>${carrito[i]["descripcion"]}</th>
+                <th>${carrito[i]["cantidad"]}</th>
+                <th>${carrito[i]["precio"]}</th>
+                <th>${(carrito[i]["cantidad"]) * (carrito[i]["precio"])}</th>
+            </tr>
+            `
+        )
+    }
+}
+// mostrarProductosEnCarrito()
 
 
 // Función para mostrar descripción del producto seleccionado.
@@ -133,21 +152,36 @@ function mostrarValor(event) {
 // Las lineas se componen por: Descripción del producto, Cantidad elegida, y su valor.
 
 function agregarAlCarrito() {
-    const newItem = `{descripcion : ${$("#demo").html()}, cantidad : ${$("#volumen").val()}, precio: ${$("#valorPesos").html()}}`;
+    // const newItem = `{descripcion : ${$("#demo").html()}, cantidad : ${$("#volumen").val()}, precio: ${$("#valorPesos").html()}}`;
+    const newItem = ({ descripcion: $("#demo").html(), cantidad: $("#volumen").val(), precio: $("#valorPesos").html() });
     carrito.agregarItem(newItem);
-    console.log("Item agregado ->", newItem)
-    console.log("Productos agregados ->", carrito.obtenerItems())
+    // console.log("Item agregado ->", newItem.descripcion)
+    // console.log("Productos agregados ->", carrito.obtenerItems())
     localStorage.setItem("carrito", JSON.stringify(carrito.obtenerItems()));
     $("#contador").html(carrito.SumaTotalItemsCarrito());
+
+    carrito.obtenerItems().forEach(element => console.log("Debug element", element));
+
+    $("#agregarAlCarrito").click(function () {
+
+        $("#cart-items").append(`
+            <tr>
+                <th>${newItem.descripcion}</th>
+                <th>${newItem.cantidad}</th>
+                <th>${newItem.precio}</th>
+                <th>${newItem.cantidad * newItem.precio}</th>
+            </tr>
+            `
+        )
+    })
+    console.log("Productos agregados ->", carrito.obtenerItems())
+
+    carrito.valorTotal()
 }
 
 ////////// BORRAR CARRITO
 
 function vaciarCarrito() {
-    const btnVaciar = document.getElementById("vaciar-carrito");
-    carrito.vaciarCarrito(btnVaciar);
-    // agregarAlCarrito()
-    // localStorage.setItem("carrito", JSON.stringify(carrito.obtenerItems()));
-    // btnVaciar.addEventListener("click", vaciarCarrito())
-    // console.log("Productos en carrito ->", carrito.obtenerItems())
+    carrito.vaciarCarrito();
+    $("#contador").html(carrito.SumaTotalItemsCarrito());
 }

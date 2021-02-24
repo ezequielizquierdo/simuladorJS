@@ -330,3 +330,6 @@ footer {
   background-size: cover;
   position: relative;
   height: 15vh; }
+
+.table {
+  background-color: whitesmoke; }
