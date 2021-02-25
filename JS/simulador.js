@@ -36,79 +36,72 @@ baseDeDatos.push(productoSeis);
 function Carrito() {
     this.items = []
 
-    // 1. Inicializamos el carrito y me fijo lo que tenemos en localStorage.
-    // 2. Si tengo data cargo el carrito en items.
-    // 3. Si no tengo nada en localStorage items lo dejo vacio.
-
-    if (localStorage.getItem("carrito") != null) {
-        carrito = JSON.parse(localStorage.getItem("carrito"));
-        this.items = carrito;
-    }
-
-    // 4. Creamos un metodo para que nos de la cantidad actual del carrito.
+    // Creo un metodo para que nos de la cantidad actual del carrito.
     this.SumaTotalItemsCarrito = function () {
         return this.items.length;
     }
 
-    // 5. Agregar un nuevo item al carrito actual.
+    // Agrego un nuevo item al carrito actual.
     // PARA MEJORAR: Antes de cargar un nuevo elemento al carrito
     // habria que ver si ese elemento existe en el carrito.
     this.agregarItem = function (item) {
         return this.items.push(item);
     }
 
-    // 6. Sumar totales de los productos en carrito.
+    // Suma totales de los productos en carrito.
     this.valorTotal = function () {
         var total = 0;
         this.items.forEach(function (obj) {
             total += parseInt(obj.precio * obj.cantidad);
         });
-        console.log("Total acumulado $ ", total);
+        // console.log("Total acumulado $ ", total);
         $("#total-value").html("$" + total.toFixed(2));
-
     }
 
-    // 7. Muestra todos los elementos existentes en items[]
+    // Muestra todos los elementos existentes en items[]
     this.obtenerItems = function () {
         // console.log("debug 2", this.items)
         return this.items;
     }
 
-    // 8. Vaciar carrito y mostrar cantidad en carrito.
+    // Vaciar carrito y mostrar cantidad en carrito.
     this.vaciarCarrito = function () {
         this.items = [];
         localStorage.clear()
+        $("#cart-items").html("")
+        $("#total-value").html("");
         $("#contador").html(this.items.length);
     }
 
-    // 9. Refleja en el id #contador la suma de items en carrito.
+    this.mostrarProductosEnCarrito = function () {
+        carrito = JSON.parse(localStorage.getItem("carrito"));
+        for (let i = 0; i < carrito.length; i++) {
+            // console.log([i]);
+            $("#cart-items").append(`
+                <tr>
+                    <th>${carrito[i]["descripcion"]}</th>
+                    <th>${carrito[i]["cantidad"]}</th>
+                    <th>${carrito[i]["precio"]}</th>
+                    <th>${(carrito[i]["cantidad"]) * (carrito[i]["precio"])}</th>
+                </tr>
+                `
+            )
+        }
+        this.valorTotal()
+    }
+
+    // Refleja en el id #contador la suma de items en carrito.
     $("#contador").html(this.SumaTotalItemsCarrito());
 
-}
 
-// 9. Refleja en el id #contador la suma de items en carrito.
-$("#contador").html(carrito.SumaTotalItemsCarrito());
-// console.group(carrito.SumaTotalItemsCarrito());
-
-function mostrarProductosEnCarrito() {
-    // localStorage.getItem("carrito")
-    // console.log("Productos agregados ->", carrito.obtenerItems())
-    carrito = JSON.parse(localStorage.getItem("carrito"));
-    for (let i = 0; i < carrito.length; i++) {
-        // console.log([i]);
-        $("#cart-items").append(`
-            <tr>
-                <th>${carrito[i]["descripcion"]}</th>
-                <th>${carrito[i]["cantidad"]}</th>
-                <th>${carrito[i]["precio"]}</th>
-                <th>${(carrito[i]["cantidad"]) * (carrito[i]["precio"])}</th>
-            </tr>
-            `
-        )
+    if (localStorage.getItem("carrito") != null) {
+        carrito = JSON.parse(localStorage.getItem("carrito"));
+        this.items = carrito;
+        this.mostrarProductosEnCarrito()
     }
 }
-// mostrarProductosEnCarrito()
 
+$("#contador").html(carrito.SumaTotalItemsCarrito());
 
 // Función para mostrar descripción del producto seleccionado.
 function mostrarDescripcion(event) {
@@ -140,16 +133,7 @@ function mostrarValor(event) {
 
 //////////////////////////// PRUEBAS ////////////////////////////
 
-////////// CARRITO
-// Que tenga las lineas de los productos que el usuario quiere agregar en su cotización
-// Tendrá que verse Descripción, cantidad, precio.
-// Poder modificar las cantidades desde el carrito.
-// Poder borrar lineas desde el carrito.
-// Que cada linea la cotice en pesos, dolares y euros.
-
 ////////// CONSTRUCCION DE LINEAS 
-// Agregar productos al carrito. 
-// Las lineas se componen por: Descripción del producto, Cantidad elegida, y su valor.
 
 function agregarAlCarrito() {
     // const newItem = `{descripcion : ${$("#demo").html()}, cantidad : ${$("#volumen").val()}, precio: ${$("#valorPesos").html()}}`;
@@ -162,9 +146,7 @@ function agregarAlCarrito() {
 
     carrito.obtenerItems().forEach(element => console.log("Debug element", element));
 
-    $("#agregarAlCarrito").click(function () {
-
-        $("#cart-items").append(`
+    $("#cart-items").append(`
             <tr>
                 <th>${newItem.descripcion}</th>
                 <th>${newItem.cantidad}</th>
@@ -172,10 +154,7 @@ function agregarAlCarrito() {
                 <th>${newItem.cantidad * newItem.precio}</th>
             </tr>
             `
-        )
-    })
-    console.log("Productos agregados ->", carrito.obtenerItems())
-
+    )
     carrito.valorTotal()
 }
 
