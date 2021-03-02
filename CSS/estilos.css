@@ -1,17 +1,39 @@
 .navbar {
   background-color: #f9c18e;
-  padding: 2vh; }
+  padding: 1.5vh; }
 
 .navbar-brand {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   margin: 0;
   padding: 5px;
   font-weight: bold; }
 
+.cuadrobotoncotizador {
+  display: flex; }
+
+.imagenparabotonchico {
+  background: url(IMG/cotizacionnegro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 8vw; }
+
+.parentesisboton {
+  display: flex;
+  font-family: "Luckiest Guy";
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 5px; }
+
+#contadorarriba {
+  font-family: "Luckiest Guy";
+  font-size: 1rem; }
+
 .navbar-nav {
   align-items: center;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 0.8rem; }
 
@@ -30,10 +52,19 @@
 .navbar-nav {
   align-items: center; }
 
+.menu__item--bento:hover .box:nth-child(2),
+.menu__item--bento:hover .box:nth-child(4),
+.menu__item--bento:hover .box:nth-child(6),
+.menu__item--bento:hover .box:nth-child(8), .menu__item--bento:focus .box:nth-child(2),
+.menu__item--bento:focus .box:nth-child(4),
+.menu__item--bento:focus .box:nth-child(6),
+.menu__item--bento:focus .box:nth-child(8) {
+  opacity: 0; }
+
 @media only screen and (min-width: 768px) {
   .navbar {
     padding: 3vh;
-    height: 10vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     align-items: center; } }
@@ -43,7 +74,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 40px;
+  padding: 20px;
   text-align: center; }
 
 .logocentro {
@@ -125,6 +156,31 @@
   border-left: 1px solid lightgray;
   background-color: #e67d57; }
 
+.cuadrobotones {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 7vh; }
+
+.imagenparaboton {
+  background: url(IMG/cotizacionnegro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 2px; }
+
+.imagenvaciar {
+  background: url(IMG/logoescoba.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 4px; }
+
 .imagen-agregar {
   background: url(IMG/agregaracotizacion.png);
   background-repeat: no-repeat;
@@ -133,11 +189,58 @@
   height: 25px;
   margin: 10px; }
 
+.botoncotizador {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw; }
+
+.botoncotizador:hover {
+  background-color: #bcecfc; }
+
+.botonvaciar {
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw; }
+
+.botonvaciar:hover {
+  background-color: #f59e9e; }
+
+.vaciar-carrito {
+  display: flex; }
+
 .botonera {
   display: flex;
   flex-direction: column;
   padding: 10px;
   align-items: center; }
+
+.imagen-cotizador {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 600; }
+
+.clear-cart {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 0.7em; }
 
 .bloqueresultado {
   display: flex;
@@ -156,7 +259,7 @@
   width: 100%; }
 
 .titulos {
-  font-family: 'Luckiest Guy';
+  font-family: "Luckiest Guy";
   font-size: 1rem; }
 
 h3 {
@@ -226,8 +329,8 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: 'Luckiest Guy';
-  font-size: .9rem;
+  font-family: "Luckiest Guy";
+  font-size: 0.9rem;
   background-color: #dfd6cd;
   display: flex;
   flex-direction: column;
@@ -321,7 +424,11 @@ h3 {
     width: 30vw; }
   .moneda {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .imagenparaboton {
+    width: 3vw; }
+  .imagenparabotonchico {
+    width: 3vw; } }
 
 footer {
   background: url(IMG/portadamonedas.jpg);
@@ -332,4 +439,69 @@ footer {
   height: 15vh; }
 
 .table {
-  background-color: whitesmoke; }
+  font-size: 0.8em;
+  font-family: "Luckiest Guy";
+  text-align: center;
+  background-color: #ffefe7;
+  border: 1px solid lightgrey; }
+
+.contenedormodal {
+  border: 2px solid white;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column; }
+
+.cuadrogrande {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9c18e;
+  padding: 5px;
+  flex-direction: row; }
+
+.contenedor-ticket {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px; }
+
+.cuadrotexto {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em;
+  font-family: "Luckiest Guy";
+  font-weight: bold;
+  justify-content: center; }
+
+.fechaenticket {
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: flex-end; }
+
+.codigoticket {
+  text-align: center;
+  font-size: 0.7rem;
+  font-style: oblique;
+  padding: 5px;
+  background-color: #e67d57;
+  color: white;
+  font-family: "Luckiest Guy"; }
+
+.segundocuadrogrande {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; }
+
+.segundo-contenedor-titulo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; }
+
+.nombreyapellido {
+  background: url(IMG/logoparacotizacion.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 10vh; }

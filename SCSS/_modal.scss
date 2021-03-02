@@ -1,3 +1,104 @@
 .table {
-    background-color: whitesmoke;
+    // background-color: whitesmoke;
+    font-size: 0.8em;
+    // font-family: "Roboto", sans-serif;
+  font-family: "Luckiest Guy";
+
+    text-align: center;
+    background-color: #ffefe7;
+    border: 1px solid lightgrey;
 }
+
+// .modal-dialog .modal-lg{
+//     background: url(IMG/portadamonedas.jpg);
+//     // background-color: grey;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+// }
+
+.contenedormodal {
+    border: 2px solid white;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.cuadrogrande {
+    display: flex;
+    flex-direction: row;
+    background-color: #f9c18e;
+    padding: 5px;
+    flex-direction: row;
+}
+
+.contenedor-ticket {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+// .logo-ticket {
+//     // background: url(IMG/logo3.png);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+//     width: 30vw;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.cuadrotexto {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    // font-family: "Roboto", sans-serif;
+  font-family: "Luckiest Guy";
+
+    font-weight: bold;
+    justify-content: center
+}
+
+.fechaenticket {
+    display: flex;
+    height: 50%;
+    // font-size: 0.8rem;
+    align-items: center;
+    // font-weight: 400;
+    justify-content: flex-end;
+}
+
+.codigoticket {
+    text-align: center;
+    font-size: 0.7rem;
+    font-style: oblique;
+    padding: 5px;
+    background-color: #e67d57;
+    color: white;
+  font-family: "Luckiest Guy";
+
+}
+
+.segundocuadrogrande {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.segundo-contenedor-titulo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nombreyapellido {
+    background: url(IMG/logoparacotizacion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 10vh;
+}
+

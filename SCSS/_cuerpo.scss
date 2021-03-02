@@ -3,11 +3,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
-.logocentro{
+.logocentro {
   background: url(IMG/logo.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -15,12 +15,12 @@
   height: 150px;
 }
 
-.barra{
+.barra {
   background: url(IMG/barraconstruccion.jpg);
   height: 1vh;
 }
 
-.container-fluid{
+.container-fluid {
   background: url(IMG/fondo.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -29,11 +29,11 @@
   flex-direction: column;
 }
 
-.bloqueform{
+.bloqueform {
   padding: 10px;
 }
 
-.formulario{
+.formulario {
   background-color: rgb(255, 239, 231);
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-.imagenmaterial{
+.imagenmaterial {
   background: url(IMG/quematerial.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -59,12 +59,12 @@
   height: 50px;
 }
 
-.materials{
+.materials {
   display: flex;
   flex-direction: column;
 }
 
-.form-select{
+.form-select {
   text-align: center;
   font-size: 14px;
 }
@@ -76,32 +76,57 @@
   text-align: center;
 }
 
-.imagencantidad{
+.imagencantidad {
   background: url(IMG/quecantidad.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   height: 50px;
-
 }
 
-.form-control{
+.form-control {
   text-align: center;
   font-size: 14px;
   height: 10vh;
 }
 
-.button-consulta{
+.button-consulta {
   border-radius: 6px;
   border-bottom: 3px solid lightgray;
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
   background-color: #e67d57;
-
 }
 
-.imagen-agregar{
+.cuadrobotones{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 7vh;
+}
+
+.imagenparaboton{
+  background: url(IMG/cotizacionnegro.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    width: 10vw;
+    margin: 2px;
+}
+
+.imagenvaciar{
+  background: url(IMG/logoescoba.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 4px;
+}
+.imagen-agregar {
   background: url(IMG/agregaracotizacion.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -110,53 +135,108 @@
   margin: 10px;
 }
 
-.botonera{
+.botoncotizador{
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw;
+}
+
+.botoncotizador:hover{
+  background-color: rgb(188, 236, 252);
+}
+
+.botonvaciar{
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw;
+}
+
+.botonvaciar:hover{
+  background-color: rgb(245, 158, 158);
+}
+
+.vaciar-carrito{
+  display: flex;
+}
+
+.botonera {
   display: flex;
   flex-direction: column;
   padding: 10px;
   align-items: center;
 }
 
-.bloqueresultado{
+.imagen-cotizador{
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.clear-cart{
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 0.7em;
+
+}
+
+.bloqueresultado {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 10px;
 }
 
-.containermodal{
+.containermodal {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 20px;
 }
 
-.cuadromoneda{
+.cuadromoneda {
   padding: 10px;
   width: 100%;
 }
 
-.titulos{
-  font-family: 'Luckiest Guy';
+.titulos {
+  font-family: "Luckiest Guy";
   font-size: 1rem;
 }
 
-h3{
+h3 {
   margin: 0;
 }
 
-.contenedorequivale{
+.contenedorequivale {
   height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#demo{
+#demo {
   font-style: italic;
 }
 
-.contenedorequivalepeso{
+.contenedorequivalepeso {
   border: 1px solid lightgrey;
   border-radius: 14px;
   border-bottom: 3px solid lightgray;
@@ -167,7 +247,7 @@ h3{
   height: 75px;
 }
 
-.contenedorequivaledolar{
+.contenedorequivaledolar {
   border: 1px solid lightgrey;
   border-radius: 14px;
   margin-bottom: 10px;
@@ -175,11 +255,11 @@ h3{
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  background-color: lightgreen ;
+  background-color: lightgreen;
   height: 75px;
 }
 
-.contenedorequivaleeuro{
+.contenedorequivaleeuro {
   border: 1px solid lightgrey;
   border-radius: 14px;
   margin-bottom: 10px;
@@ -191,7 +271,7 @@ h3{
   height: 75px;
 }
 
-.titulo-monedas{
+.titulo-monedas {
   background-color: #d3d3d3;
   background-repeat: no-repeat;
   background-position: center;
@@ -202,7 +282,7 @@ h3{
   justify-content: center;
 }
 
-.monedashoy{
+.monedashoy {
   background: url(IMG/lasmonedashoy.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -211,14 +291,14 @@ h3{
   margin: 10px;
 }
 
-.contenedor-monedas{
+.contenedor-monedas {
   background: url(IMG/fondomonedas.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  font-family: 'Luckiest Guy';
-  font-size: .9rem;
+  font-family: "Luckiest Guy";
+  font-size: 0.9rem;
   background-color: #dfd6cd;
   display: flex;
   flex-direction: column;
@@ -226,11 +306,11 @@ h3{
   justify-content: center;
 }
 
-.cotizacion-monedas{
+.cotizacion-monedas {
   padding: 30px;
 }
 
-.cuadrodolar{
+.cuadrodolar {
   background-color: antiquewhite;
   display: flex;
   flex-direction: column;
@@ -242,43 +322,42 @@ h3{
   border-radius: 6px;
 }
 
-.titulo-cotizacion-moneda{
+.titulo-cotizacion-moneda {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 1.2rem;
 }
 
-.moneda{
+.moneda {
   display: flex;
   flex-direction: column;
   text-align: center;
-  
 }
 
-.padre-compra-venta{
+.padre-compra-venta {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.cuadro-compra-venta{
+.cuadro-compra-venta {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
 }
 
-.topico{
+.topico {
   font-style: italic;
 }
 
-.mensajecotizacion{
+.mensajecotizacion {
   font-size: 0.6rem;
   font-style: italic;
 }
 
-.cuadroeuro{
+.cuadroeuro {
   background-color: antiquewhite;
   display: flex;
   flex-direction: column;
@@ -290,61 +369,63 @@ h3{
   border-radius: 6px;
 }
 
-.imagen-obreros{
+.imagen-obreros {
   background: url(IMG/trabajadores.png);
   background-color: #dfd6cd;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   height: 25vh;
-
 }
 
 @media only screen and (min-width: 768px) {
-
-  .logocentro{
+  .logocentro {
     background: url(IMG/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 240px;
   }
 
-  .container-fluid{
+  .container-fluid {
     display: flex;
     flex-direction: row;
   }
 
-  .bloqueform{
+  .bloqueform {
     padding: 100px;
     display: flex;
     flex-direction: column;
   }
 
-  .bloqueresultado{
+  .bloqueresultado {
     padding: 70px;
   }
 
-  .resultados{
+  .resultados {
     margin: 40px;
   }
 
-  .contenedor-monedas{
+  .contenedor-monedas {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .cotizacion-monedas{
+  .cotizacion-monedas {
     width: 30vw;
   }
 
-  .moneda{
+  .moneda {
     display: flex;
     flex-direction: column;
   }
+
+  .imagenparaboton {
+    width: 3vw;
+  }
+
+  .imagenparabotonchico {
+    width: 3vw;
 }
 
-
-
-
-
+}
