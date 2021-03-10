@@ -1,25 +1,3 @@
-.bienvenida {
-  background: url(IMG/portadanaranja.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 20px;
-  text-align: center;
-}
-
-.logocentro {
-  background: url(IMG/logo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 150px;
-}
-
-.barra {
-  background: url(IMG/barraconstruccion.jpg);
-  height: 1vh;
-}
-
 .container-fluid {
   background: url(IMG/fondo.jpg);
   background-repeat: no-repeat;
@@ -30,25 +8,34 @@
 }
 
 .bloqueform {
-  padding: 10px;
+  padding: 30px;
 }
 
 .formulario {
   background-color: rgb(255, 239, 231);
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  border-top: 1px solid lightgrey;
-  border-left: 1px solid lightgray;
-  border-bottom: 3px solid lightgrey;
+  padding: 20px 10px 20px 10px;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
   border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
 }
 
 .primera {
   background-color: #f9c18e;
-  height: 20vh;
-  padding: 50px;
+  height: 10vh;
+  padding: 0px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
 }
 
 .imagenmaterial {
@@ -56,24 +43,36 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 50px;
+  height: 20px;
 }
 
 .materials {
   display: flex;
   flex-direction: column;
+  height: 17vh;
 }
 
 .form-select {
   text-align: center;
-  font-size: 14px;
+  font-family: "Luckiest Guy";
+  font-size: 0.7rem;
+  background-color: whitesmoke;
+  height: 100%;
 }
 
 .cantidad {
   background-color: #f9c18e;
-  height: 20vh;
-  padding: 50px;
+  height: 10vh;
+  padding: 0px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
 }
 
 .imagencantidad {
@@ -81,7 +80,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 50px;
+  height: 20px;
+}
+.numeros {
+  height: 5vh;
 }
 
 .form-control {
@@ -96,83 +98,22 @@
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  background-color: #e67d57;
-}
-
-.cuadrobotones{
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-evenly;
+  background-color: #dab8ad;
   height: 7vh;
+  padding: 0px;
+  text-align: center;
 }
 
-.imagenparaboton{
-  background: url(IMG/cotizacionnegro.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    display: flex;
-    width: 10vw;
-    margin: 2px;
+.button-consulta:hover {
+  background-color: #d86d4a;
 }
 
-.imagenvaciar{
-  background: url(IMG/logoescoba.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  display: flex;
-  width: 10vw;
-  margin: 4px;
-}
 .imagen-agregar {
   background: url(IMG/agregaracotizacion.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 25px;
-  margin: 10px;
-}
-
-.botoncotizador{
-  background-color: lightblue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 1px solid lightgrey;
-  border-radius: 14px;
-  border-bottom: 3px solid lightgray;
-  border-right: 3px solid lightgray;
-  border-top: 1px solid lightgray;
-  border-left: 1px solid lightgray;
-  width: 30vw;
-}
-
-.botoncotizador:hover{
-  background-color: rgb(188, 236, 252);
-}
-
-.botonvaciar{
-  background-color: lightcoral;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 1px solid lightgrey;
-  border-radius: 14px;
-  border-bottom: 3px solid lightgray;
-  border-right: 3px solid lightgray;
-  border-top: 1px solid lightgray;
-  border-left: 1px solid lightgray;
-  width: 30vw;
-}
-
-.botonvaciar:hover{
-  background-color: rgb(245, 158, 158);
-}
-
-.vaciar-carrito{
-  display: flex;
+  height: 20px;
 }
 
 .botonera {
@@ -182,19 +123,84 @@
   align-items: center;
 }
 
-.imagen-cotizador{
-  font-family: "Roboto", sans-serif;
-  color: white;
-  font-size: 0.7em;
-  font-weight: 600;
+.cuadrobotones {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 5vh;
 }
 
-.clear-cart{
+.botoncotizador {
+  background-color: lightblue;
+  font-family: "Luckiest Guy";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw;
+}
+
+.botoncotizador:hover {
+  background-color: rgb(188, 236, 252);
+}
+
+.imagenparaboton {
+  background: url(IMG/cotizacionnegro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 2px;
+}
+
+.parentesisboton {
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black;
+}
+
+.botonvaciar {
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw;
+}
+
+.botonvaciar:hover {
+  background-color: rgb(245, 158, 158);
+}
+
+.clear-cart {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: 600;
   font-size: 0.7em;
+}
 
+.imagenvaciar {
+  background: url(IMG/logoescoba.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 4px;
 }
 
 .bloqueresultado {
@@ -202,13 +208,6 @@
   flex-direction: column;
   text-align: center;
   padding: 10px;
-}
-
-.containermodal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px;
 }
 
 .cuadromoneda {
@@ -221,15 +220,32 @@
   font-size: 1rem;
 }
 
-h3 {
-  margin: 0;
+.bajadas {
+  font-size: 0.8rem;
+}
+
+#unitario {
+  font-size: 1.4rem;
+}
+#valorPesos {
+  font-size: 1.4rem;
+}
+#valorDolares {
+  font-size: 1.4rem;
+}
+#valorEuros {
+  font-size: 1.4rem;
 }
 
 .contenedorequivale {
-  height: 60px;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.contenedorpreciounitario {
+  height: 5vh;
 }
 
 #demo {
@@ -244,7 +260,7 @@ h3 {
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
   background-color: lightcyan;
-  height: 75px;
+  height: 15vh;
 }
 
 .contenedorequivaledolar {
@@ -255,8 +271,8 @@ h3 {
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  background-color: lightgreen;
-  height: 75px;
+  background-color: rgb(181, 236, 181);
+  height: 15vh;
 }
 
 .contenedorequivaleeuro {
@@ -268,7 +284,7 @@ h3 {
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
   background-color: lightblue;
-  height: 75px;
+  height: 15vh;
 }
 
 .titulo-monedas {
@@ -315,12 +331,13 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border-top: 1px solid lightgreen;
-  border-left: 1px solid lightgreen;
-  border-bottom: 4px solid lightgreen;
-  border-right: 4px solid lightgreen;
+  border-top: 1px solid rgb(181, 236, 181);
+  border-left: 1px solid rgb(181, 236, 181);
+  border-bottom: 4px solid rgb(181, 236, 181);
+  border-right: 4px solid rgb(181, 236, 181);
   border-radius: 6px;
 }
+
 
 .titulo-cotizacion-moneda {
   display: flex;
@@ -378,7 +395,35 @@ h3 {
   height: 25vh;
 }
 
+.barra {
+  background: url(IMG/barraconstruccion.jpg);
+  height: 1vh;
+}
+
 @media only screen and (min-width: 768px) {
+  .formulario {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .materials {
+    height: 30vh;
+  }
+
+  .primera {
+    height: 15vh;
+  }
+
+  .cantidad {
+    height: 10vh;
+  }
+
+  .form-select {
+    height: 100%;
+  }
+
   .logocentro {
     background: url(IMG/logo.png);
     background-repeat: no-repeat;
@@ -398,7 +443,7 @@ h3 {
   }
 
   .bloqueresultado {
-    padding: 70px;
+    padding: 40px 70px;
   }
 
   .resultados {
@@ -426,6 +471,5 @@ h3 {
 
   .imagenparabotonchico {
     width: 3vw;
-}
-
+  }
 }

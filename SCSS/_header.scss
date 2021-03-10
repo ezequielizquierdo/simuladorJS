@@ -1,85 +1,65 @@
-.navbar {
-  background-color: #f9c18e;
-  padding: 1.5vh;
-}
-
-.navbar-brand {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  margin: 0;
-  padding: 5px;
-  font-weight: bold;
-}
-
-.cuadrobotoncotizador {
+.header {
+  background-color: #dab8ad;
   display: flex;
+  height: 5.6vh;
 }
-.imagenparabotonchico {
-  background: url(IMG/cotizacionnegro.png);
+
+.contenedorheader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ladrilloitem {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  font-family: "Luckiest Guy";
+}
+
+.ladrilloitem :hover {
+  background-color: #d86d4a;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  border: 2.5px solid #c26243;
+}
+
+.nav-link {
+  display: flex;
+  color: whitesmoke;
+  font-size: 0.7rem;
+}
+
+.bienvenida {
+  background: url(IMG/portadamonedas.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  border-bottom: 1px dotted grey;
+  width: 100%;
+}
+
+.logocentro {
+  background: url(IMG/logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  display: flex;
-  width: 8vw;
-}
-
-.parentesisboton {
-  display: flex;
-  font-family: "Luckiest Guy";
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-#contadorarriba {
-  font-family: "Luckiest Guy";
-  font-size: 1rem;
-}
-
-.navbar-nav {
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-.navbar-light .navbar-nav .nav-link.active {
-  color: black;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: black;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-  font-weight: bolder;
-}
-
-.navbar-collapse {
-  justify-content: flex-end;
-}
-.navbar-nav {
-  align-items: center;
-}
-
-.menu__item--bento {
-  &:hover,
-  &:focus {
-    .box:nth-child(2),
-    .box:nth-child(4),
-    .box:nth-child(6),
-    .box:nth-child(8) {
-      opacity: 0;
-    }
-  }
+  height: 110px;
 }
 
 @media only screen and (min-width: 768px) {
-  .navbar {
-    padding: 3vh;
-    height: 6vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .logocentro-modal {
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    background-size: contain;
   }
 }

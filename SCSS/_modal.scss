@@ -1,24 +1,28 @@
 .table {
-    // background-color: whitesmoke;
-    font-size: 0.8em;
-    // font-family: "Roboto", sans-serif;
-  font-family: "Luckiest Guy";
-
+    font-size: 0.7em;
+    font-family: "Luckiest Guy";
     text-align: center;
     background-color: #ffefe7;
-    border: 1px solid lightgrey;
+    margin: 0;
 }
 
-// .modal-dialog .modal-lg{
-//     background: url(IMG/portadamonedas.jpg);
-//     // background-color: grey;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: contain;
-// }
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+    padding: 0;
+}
+
+.botonborrar:hover {
+    background-color: #dd5a67;
+    color: white;
+}
 
 .contenedormodal {
-    border: 2px solid white;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -27,8 +31,7 @@
 .cuadrogrande {
     display: flex;
     flex-direction: row;
-    background-color: #f9c18e;
-    padding: 5px;
+    background-color: whitesmoke;
     flex-direction: row;
 }
 
@@ -41,25 +44,23 @@
     padding: 10px;
 }
 
-// .logo-ticket {
-//     // background: url(IMG/logo3.png);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: contain;
-//     width: 30vw;
-//     display: flex;
-//     flex-direction: column;
-// }
+.logocentro-modal {
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 15vh;
+}
 
 .cuadrotexto {
     display: flex;
     flex-direction: column;
     font-size: 0.7em;
     // font-family: "Roboto", sans-serif;
-  font-family: "Luckiest Guy";
+    font-family: "Luckiest Guy";
 
     font-weight: bold;
-    justify-content: center
+    justify-content: center;
 }
 
 .fechaenticket {
@@ -78,8 +79,7 @@
     padding: 5px;
     background-color: #e67d57;
     color: white;
-  font-family: "Luckiest Guy";
-
+    font-family: "Luckiest Guy";
 }
 
 .segundocuadrogrande {
@@ -102,3 +102,77 @@
     height: 10vh;
 }
 
+.btn-secondary {
+    border-radius: 6px;
+    border-bottom: 3px solid lightgray;
+    border-right: 3px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    background-color: #dab8ad;
+    height: 7vh;
+    padding: 0px;
+    text-align: center;
+    font-size: 0.7rem;
+    width: 23vw;
+    font-family: "Luckiest Guy";
+}
+
+.btn-secondary:hover {
+    background-color: #d86d4a;
+}
+///////////////////////////////
+.botonesenmodal {
+    display: flex;
+    flex-direction: row;
+    background-color: #dab8ad;
+    height: 4vh;
+    align-items: center;
+    border-radius: 7px;
+    border-bottom: 3px solid lightgray;
+    border-right: 3px solid lightgray;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+.botonesenmodal:hover {
+    background-color: #d86d4a;
+}
+
+.imagenseguircotizando {
+    background: url(IMG/seguircotizando.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    width: 40vw;
+    margin: 14px;
+    height: 2vh;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+    height: 10vh;
+}
+///////////////////////////////
+
+@media only screen and (min-width: 768px) {
+    .logocentro-modal {
+        background: url(IMG/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 20vh;
+    }
+
+    .imagenseguircotizando {
+        width: 20vw;
+    }
+}

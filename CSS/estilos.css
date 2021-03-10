@@ -1,92 +1,59 @@
-.navbar {
-  background-color: #f9c18e;
-  padding: 1.5vh; }
-
-.navbar-brand {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  margin: 0;
-  padding: 5px;
-  font-weight: bold; }
-
-.cuadrobotoncotizador {
-  display: flex; }
-
-.imagenparabotonchico {
-  background: url(IMG/cotizacionnegro.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.header {
+  background-color: #dab8ad;
   display: flex;
-  width: 8vw; }
+  height: 5.6vh; }
 
-.parentesisboton {
+.contenedorheader {
   display: flex;
-  font-family: "Luckiest Guy";
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-top: 5px; }
-
-#contadorarriba {
-  font-family: "Luckiest Guy";
-  font-size: 1rem; }
-
-.navbar-nav {
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 0.8rem; }
-
-.navbar-light .navbar-nav .nav-link.active {
-  color: black; }
-
-.navbar-light .navbar-nav .nav-link {
-  color: black; }
-
-.navbar-light .navbar-nav .nav-link:hover {
-  font-weight: bolder; }
-
-.navbar-collapse {
-  justify-content: flex-end; }
-
-.navbar-nav {
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
   align-items: center; }
 
-.menu__item--bento:hover .box:nth-child(2),
-.menu__item--bento:hover .box:nth-child(4),
-.menu__item--bento:hover .box:nth-child(6),
-.menu__item--bento:hover .box:nth-child(8), .menu__item--bento:focus .box:nth-child(2),
-.menu__item--bento:focus .box:nth-child(4),
-.menu__item--bento:focus .box:nth-child(6),
-.menu__item--bento:focus .box:nth-child(8) {
-  opacity: 0; }
+.ladrilloitem {
+  display: flex;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  font-family: "Luckiest Guy"; }
 
-@media only screen and (min-width: 768px) {
-  .navbar {
-    padding: 3vh;
-    height: 6vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center; } }
+.ladrilloitem :hover {
+  background-color: #d86d4a;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  border: 2.5px solid #c26243; }
+
+.nav-link {
+  display: flex;
+  color: whitesmoke;
+  font-size: 0.7rem; }
 
 .bienvenida {
-  background: url(IMG/portadanaranja.jpg);
+  background: url(IMG/portadamonedas.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 20px;
-  text-align: center; }
+  border-bottom: 1px dotted grey;
+  width: 100%; }
 
 .logocentro {
   background: url(IMG/logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 150px; }
+  height: 110px; }
 
-.barra {
-  background: url(IMG/barraconstruccion.jpg);
-  height: 1vh; }
+@media only screen and (min-width: 768px) {
+  .logocentro-modal {
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    background-size: contain; } }
 
 .container-fluid {
   background: url(IMG/fondo.jpg);
@@ -97,51 +64,75 @@
   flex-direction: column; }
 
 .bloqueform {
-  padding: 10px; }
+  padding: 30px; }
 
 .formulario {
   background-color: #ffefe7;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  border-top: 1px solid lightgrey;
-  border-left: 1px solid lightgray;
-  border-bottom: 3px solid lightgrey;
-  border-right: 3px solid lightgray; }
+  padding: 20px 10px 20px 10px;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray; }
 
 .primera {
   background-color: #f9c18e;
-  height: 20vh;
-  padding: 50px;
-  text-align: center; }
+  height: 10vh;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray; }
 
 .imagenmaterial {
   background: url(IMG/quematerial.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 50px; }
+  height: 20px; }
 
 .materials {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 17vh; }
 
 .form-select {
   text-align: center;
-  font-size: 14px; }
+  font-family: "Luckiest Guy";
+  font-size: 0.7rem;
+  background-color: whitesmoke;
+  height: 100%; }
 
 .cantidad {
   background-color: #f9c18e;
-  height: 20vh;
-  padding: 50px;
-  text-align: center; }
+  height: 10vh;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 14px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray; }
 
 .imagencantidad {
   background: url(IMG/quecantidad.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 50px; }
+  height: 20px; }
+
+.numeros {
+  height: 5vh; }
 
 .form-control {
   text-align: center;
@@ -154,14 +145,50 @@
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  background-color: #e67d57; }
+  background-color: #dab8ad;
+  height: 7vh;
+  padding: 0px;
+  text-align: center; }
+
+.button-consulta:hover {
+  background-color: #d86d4a; }
+
+.imagen-agregar {
+  background: url(IMG/agregaracotizacion.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 20px; }
+
+.botonera {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center; }
 
 .cuadrobotones {
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 7vh; }
+  height: 5vh; }
+
+.botoncotizador {
+  background-color: lightblue;
+  font-family: "Luckiest Guy";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  width: 30vw; }
+
+.botoncotizador:hover {
+  background-color: #bcecfc; }
 
 .imagenparaboton {
   background: url(IMG/cotizacionnegro.png);
@@ -172,38 +199,12 @@
   width: 10vw;
   margin: 2px; }
 
-.imagenvaciar {
-  background: url(IMG/logoescoba.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.parentesisboton {
   display: flex;
-  width: 10vw;
-  margin: 4px; }
-
-.imagen-agregar {
-  background: url(IMG/agregaracotizacion.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 25px;
-  margin: 10px; }
-
-.botoncotizador {
-  background-color: lightblue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 1px solid lightgrey;
-  border-radius: 14px;
-  border-bottom: 3px solid lightgray;
-  border-right: 3px solid lightgray;
-  border-top: 1px solid lightgray;
-  border-left: 1px solid lightgray;
-  width: 30vw; }
-
-.botoncotizador:hover {
-  background-color: #bcecfc; }
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black; }
 
 .botonvaciar {
   background-color: lightcoral;
@@ -211,7 +212,7 @@
   flex-direction: row;
   justify-content: center;
   border: 1px solid lightgrey;
-  border-radius: 14px;
+  border-radius: 7px;
   border-bottom: 3px solid lightgray;
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
@@ -221,38 +222,26 @@
 .botonvaciar:hover {
   background-color: #f59e9e; }
 
-.vaciar-carrito {
-  display: flex; }
-
-.botonera {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  align-items: center; }
-
-.imagen-cotizador {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  font-size: 0.7em;
-  font-weight: 600; }
-
 .clear-cart {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: 600;
   font-size: 0.7em; }
 
+.imagenvaciar {
+  background: url(IMG/logoescoba.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 10vw;
+  margin: 4px; }
+
 .bloqueresultado {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 10px; }
-
-.containermodal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px; }
 
 .cuadromoneda {
   padding: 10px;
@@ -262,14 +251,29 @@
   font-family: "Luckiest Guy";
   font-size: 1rem; }
 
-h3 {
-  margin: 0; }
+.bajadas {
+  font-size: 0.8rem; }
+
+#unitario {
+  font-size: 1.4rem; }
+
+#valorPesos {
+  font-size: 1.4rem; }
+
+#valorDolares {
+  font-size: 1.4rem; }
+
+#valorEuros {
+  font-size: 1.4rem; }
 
 .contenedorequivale {
-  height: 60px;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+
+.contenedorpreciounitario {
+  height: 5vh; }
 
 #demo {
   font-style: italic; }
@@ -282,7 +286,7 @@ h3 {
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
   background-color: lightcyan;
-  height: 75px; }
+  height: 15vh; }
 
 .contenedorequivaledolar {
   border: 1px solid lightgrey;
@@ -292,8 +296,8 @@ h3 {
   border-right: 3px solid lightgray;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  background-color: lightgreen;
-  height: 75px; }
+  background-color: #b5ecb5;
+  height: 15vh; }
 
 .contenedorequivaleeuro {
   border: 1px solid lightgrey;
@@ -304,7 +308,7 @@ h3 {
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
   background-color: lightblue;
-  height: 75px; }
+  height: 15vh; }
 
 .titulo-monedas {
   background-color: #d3d3d3;
@@ -345,10 +349,10 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border-top: 1px solid lightgreen;
-  border-left: 1px solid lightgreen;
-  border-bottom: 4px solid lightgreen;
-  border-right: 4px solid lightgreen;
+  border-top: 1px solid #b5ecb5;
+  border-left: 1px solid #b5ecb5;
+  border-bottom: 4px solid #b5ecb5;
+  border-right: 4px solid #b5ecb5;
   border-radius: 6px; }
 
 .titulo-cotizacion-moneda {
@@ -399,7 +403,24 @@ h3 {
   background-size: contain;
   height: 25vh; }
 
+.barra {
+  background: url(IMG/barraconstruccion.jpg);
+  height: 1vh; }
+
 @media only screen and (min-width: 768px) {
+  .formulario {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .materials {
+    height: 30vh; }
+  .primera {
+    height: 15vh; }
+  .cantidad {
+    height: 10vh; }
+  .form-select {
+    height: 100%; }
   .logocentro {
     background: url(IMG/logo.png);
     background-repeat: no-repeat;
@@ -413,7 +434,7 @@ h3 {
     display: flex;
     flex-direction: column; }
   .bloqueresultado {
-    padding: 70px; }
+    padding: 40px 70px; }
   .resultados {
     margin: 40px; }
   .contenedor-monedas {
@@ -431,22 +452,159 @@ h3 {
     width: 3vw; } }
 
 footer {
-  background: url(IMG/portadamonedas.jpg);
+  background-color: #dab8ad;
+  height: 20vh;
+  display: flex; }
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.titulolinks {
+  background: url(IMG/links.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  position: relative;
-  height: 15vh; }
+  background-size: 45%;
+  display: flex;
+  height: 20%;
+  display: flex;
+  flex-direction: column; }
+
+.cuadrofooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
+.cuadrolinks {
+  display: flex;
+  height: 30%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  font-size: 1rem; }
+
+.cuadroredes {
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly; }
+
+.link {
+  display: flex;
+  flex-direction: column; }
+
+.twitter {
+  width: 20%; }
+
+.icontwitter {
+  background: url(IMG/twitter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+.icontwitter:hover {
+  background: url(IMG/twitter-naraja.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+.facebook {
+  width: 20%; }
+
+.iconface {
+  background: url(IMG/facebook.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+.iconface:hover {
+  background: url(IMG/facebook-naraja.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+.linkedin {
+  width: 20%; }
+
+.iconlinkedin {
+  background: url(IMG/linkedin.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+.iconlinkedin:hover {
+  background: url(IMG/linkedin-naraja.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  height: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .titulolinks {
+    display: flex;
+    flex-direction: row; }
+  .cuadrofooter {
+    display: flex;
+    width: 100%; }
+  .footer {
+    display: flex;
+    flex-direction: row; }
+  .cuadrolinks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+  .titulolinks {
+    background: url(IMG/links.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    display: flex;
+    height: 10%;
+    display: flex;
+    flex-direction: column; }
+  .cuadroredes {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%; } }
 
 .table {
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-family: "Luckiest Guy";
   text-align: center;
   background-color: #ffefe7;
-  border: 1px solid lightgrey; }
+  margin: 0; }
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  padding: 0; }
+
+.botonborrar:hover {
+  background-color: #dd5a67;
+  color: white; }
 
 .contenedormodal {
-  border: 2px solid white;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column; }
@@ -454,8 +612,7 @@ footer {
 .cuadrogrande {
   display: flex;
   flex-direction: row;
-  background-color: #f9c18e;
-  padding: 5px;
+  background-color: whitesmoke;
   flex-direction: row; }
 
 .contenedor-ticket {
@@ -465,6 +622,13 @@ footer {
   justify-content: space-around;
   margin: 10px;
   padding: 10px; }
+
+.logocentro-modal {
+  background: url(IMG/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 15vh; }
 
 .cuadrotexto {
   display: flex;
@@ -505,3 +669,67 @@ footer {
   background-position: center;
   background-size: contain;
   height: 10vh; }
+
+.btn-secondary {
+  border-radius: 6px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: #dab8ad;
+  height: 7vh;
+  padding: 0px;
+  text-align: center;
+  font-size: 0.7rem;
+  width: 23vw;
+  font-family: "Luckiest Guy"; }
+
+.btn-secondary:hover {
+  background-color: #d86d4a; }
+
+.botonesenmodal {
+  display: flex;
+  flex-direction: row;
+  background-color: #dab8ad;
+  height: 4vh;
+  align-items: center;
+  border-radius: 7px;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray; }
+
+.botonesenmodal:hover {
+  background-color: #d86d4a; }
+
+.imagenseguircotizando {
+  background: url(IMG/seguircotizando.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 40vw;
+  margin: 14px;
+  height: 2vh; }
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+  height: 10vh; }
+
+@media only screen and (min-width: 768px) {
+  .logocentro-modal {
+    background: url(IMG/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 20vh; }
+  .imagenseguircotizando {
+    width: 20vw; } }
