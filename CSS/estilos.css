@@ -100,7 +100,8 @@
 
 .materials {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  text-align: center; }
 
 .form-select {
   text-align: center;
