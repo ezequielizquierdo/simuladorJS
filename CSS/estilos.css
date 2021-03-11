@@ -110,12 +110,7 @@
   font-size: 0.7rem;
   background-color: whitesmoke;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  text-align-last: center;
-  text-align: center;
-  -ms-text-align-last: center;
-  -moz-text-align-last: center; }
+  display: flex; }
 
 .cantidad {
   background-color: #f9c18e;
@@ -422,7 +417,9 @@
   .cantidad {
     height: 10vh; }
   .form-select {
-    height: 100%; }
+    height: 100%;
+    justify-content: center;
+    text-align: center; }
   .logocentro {
     background: url(IMG/logo.png);
     background-repeat: no-repeat;
