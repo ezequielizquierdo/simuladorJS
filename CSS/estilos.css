@@ -111,8 +111,11 @@
   background-color: whitesmoke;
   height: 100%;
   display: flex;
+  justify-content: center;
   text-align-last: center;
-  justify-content: center; }
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center; }
 
 .cantidad {
   background-color: #f9c18e;

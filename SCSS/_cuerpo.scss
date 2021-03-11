@@ -58,8 +58,11 @@
   background-color: whitesmoke;
   height: 100%;
   display: flex;
-  text-align-last: center;
   justify-content: center;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
 
 }
 
