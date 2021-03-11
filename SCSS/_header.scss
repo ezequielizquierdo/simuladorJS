@@ -18,6 +18,7 @@
   text-align: center;
   justify-content: center;
   font-family: "Luckiest Guy";
+  height: 100%;
 }
 
 .ladrilloitem :hover {
@@ -27,13 +28,14 @@
   text-align: center;
   justify-content: center;
   color: white;
-  border: 2.5px solid #c26243;
 }
 
 .nav-link {
   display: flex;
   color: whitesmoke;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bienvenida {
