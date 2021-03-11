@@ -101,7 +101,7 @@
 .materials {
   display: flex;
   flex-direction: column;
-  height: 17vh; }
+  height: 3vh; }
 
 .form-select {
   text-align: center;
