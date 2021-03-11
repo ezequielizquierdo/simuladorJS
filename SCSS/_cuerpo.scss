@@ -173,6 +173,7 @@
 
 .botonvaciar {
   background-color: lightcoral;
+  font-family: "Luckiest Guy";
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -187,13 +188,6 @@
 
 .botonvaciar:hover {
   background-color: rgb(245, 158, 158);
-}
-
-.clear-cart {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  font-weight: 600;
-  font-size: 0.7em;
 }
 
 .imagenvaciar {
