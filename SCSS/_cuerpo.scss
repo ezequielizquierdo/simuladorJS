@@ -53,11 +53,14 @@
 }
 
 .form-select {
-  text-align: center;
   font-family: "Luckiest Guy";
   font-size: 0.7rem;
   background-color: whitesmoke;
   height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
 }
 
 .cantidad {
