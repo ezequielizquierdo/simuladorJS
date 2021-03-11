@@ -204,7 +204,6 @@
 .parentesisboton {
   display: flex;
   font-size: 0.8rem;
-  font-weight: bold;
   margin-top: 5px;
   color: black; }
 
@@ -587,11 +586,8 @@ footer {
   font-family: "Luckiest Guy";
   text-align: center;
   background-color: #ffefe7;
-  margin: 0; }
-
-.table > :not(caption) > * > * {
-  background-color: none;
-  padding: .5rem; }
+  margin: 0;
+  font-weight: lighter; }
 
 .modal-header {
   display: flex;
@@ -641,7 +637,6 @@ footer {
   flex-direction: column;
   font-size: 0.6em;
   font-family: "Luckiest Guy";
-  font-weight: bold;
   justify-content: center; }
 
 .fechaenticket {
@@ -737,5 +732,7 @@ footer {
     background-position: center;
     background-size: contain;
     height: 20vh; }
+  .table {
+    font-size: 0.7em; }
   .imagenseguircotizando {
     width: 20vw; } }
