@@ -6,6 +6,11 @@
     margin: 0;
 }
 
+.table>:not(caption)>*>*{
+    background-color: none;
+    padding: .5rem;
+}
+
 .modal-header {
     display: flex;
     flex-shrink: 0;
@@ -15,6 +20,10 @@
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
     padding: 0;
+}
+
+.botonborrar {
+    background-color: #ffefe7;
 }
 
 .botonborrar:hover {
@@ -55,10 +64,8 @@
 .cuadrotexto {
     display: flex;
     flex-direction: column;
-    font-size: 0.7em;
-    // font-family: "Roboto", sans-serif;
+    font-size: 0.6em;
     font-family: "Luckiest Guy";
-
     font-weight: bold;
     justify-content: center;
 }
@@ -66,9 +73,7 @@
 .fechaenticket {
     display: flex;
     height: 50%;
-    // font-size: 0.8rem;
     align-items: center;
-    // font-weight: 400;
     justify-content: flex-end;
 }
 
@@ -120,7 +125,7 @@
 .btn-secondary:hover {
     background-color: #d86d4a;
 }
-///////////////////////////////
+
 .botonesenmodal {
     display: flex;
     flex-direction: row;
@@ -161,7 +166,6 @@
     border-bottom-left-radius: calc(0.3rem - 1px);
     height: 10vh;
 }
-///////////////////////////////
 
 @media only screen and (min-width: 768px) {
     .logocentro-modal {

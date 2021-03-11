@@ -589,6 +589,10 @@ footer {
   background-color: #ffefe7;
   margin: 0; }
 
+.table > :not(caption) > * > * {
+  background-color: none;
+  padding: .5rem; }
+
 .modal-header {
   display: flex;
   flex-shrink: 0;
@@ -598,6 +602,9 @@ footer {
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
   padding: 0; }
+
+.botonborrar {
+  background-color: #ffefe7; }
 
 .botonborrar:hover {
   background-color: #dd5a67;
@@ -632,7 +639,7 @@ footer {
 .cuadrotexto {
   display: flex;
   flex-direction: column;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-family: "Luckiest Guy";
   font-weight: bold;
   justify-content: center; }

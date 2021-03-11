@@ -219,7 +219,7 @@ function Carrito() {
                     <th>${carrito.items[i].um}</th>
                     <th>${"$" + carrito.items[i].unitario}</th>
                     <th>${"$" + ((carrito.items[i].cantidad) * (carrito.items[i].unitario)).toFixed(2)}</th>
-                    <th class="text-center botonborrar"onclick="borrarLinea(${i})"><span type="button">x</span></th>
+                    <th class="botonborrar" onclick="borrarLinea(${i})"><span type="button">x</span></th>
                 </tr>
             `)
         }
@@ -321,7 +321,7 @@ function agregarAlCarrito() {
                 <th>${newItem.um}</th>
                 <th>${"$" + newItem.unitario}</th>
                 <th>${"$" + (newItem.cantidad * newItem.unitario).toFixed(2)}</th>
-                <th class="text-center botonborrar" onclick="borrarLinea(${i})"><span type="button">x</span></th>
+                <th class="botonborrar" onclick="borrarLinea(${i})"><span type="button">x</span></th>
             </tr>
             `
     )
