@@ -455,18 +455,6 @@ input:focus {
   .imagenparabotonchico {
     width: 3vw; } }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select,
-  textarea,
-  input {
-    font-size: 16px; } }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select:focus,
-  textarea:focus,
-  input:focus {
-    font-size: 16px; } }
-
 footer {
   background-color: #dab8ad;
   height: 20vh;
