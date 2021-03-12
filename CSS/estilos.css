@@ -593,7 +593,7 @@ footer {
   text-align: center;
   background-color: #ffefe7;
   margin: 0;
-  font-weight: lighter; }
+  font-weight: 400 !important; }
 
 .modal-header {
   display: flex;
