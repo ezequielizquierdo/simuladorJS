@@ -110,7 +110,8 @@
   font-size: 0.7rem;
   background-color: whitesmoke;
   height: 100%;
-  display: flex; }
+  display: flex;
+  border-radius: 10px; }
 
 .cantidad {
   background-color: #f9c18e;
@@ -448,6 +449,12 @@
     width: 3vw; }
   .imagenparabotonchico {
     width: 3vw; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px; } }
 
 footer {
   background-color: #dab8ad;
