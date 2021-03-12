@@ -54,12 +54,20 @@
 
 .form-select {
   font-family: "Luckiest Guy";
-  font-size: 0.7rem;
   background-color: whitesmoke;
   height: 100%;
   display: flex;
   border-radius: 10px;
 }
+
+input{
+  font-size: 0.7rem;
+}
+
+input:focus {
+  font-size: 0.7rem;
+}
+
 
 .cantidad {
   background-color: #f9c18e;
@@ -471,9 +479,17 @@
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	select,
-	textarea,
-	input {
-		font-size: 16px;
-	}
+  select,
+  textarea,
+  input {
+    font-size: 0.7rem;
+
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 0.7rem;
+  }
 }
